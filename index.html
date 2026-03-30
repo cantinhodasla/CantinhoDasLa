@@ -6,16 +6,46 @@
     <title>Cantinho das La</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <header class="header-topo">
     <div class="interface">
-        <div class="logo">
+        
+        <div class="bloco-logo">
             <a href="index.html">
                 <img src="img/Logotipo.png" alt="Logo">
-                <span class="nome-site">CANTINHO DAS LA</span>
             </a>
         </div>
+
+        <div class="bloco-central">
+            <div class="barra-pesquisa">
+                <form action="/pesquisar" method="GET">
+                    <input type="text" name="q" placeholder="O que procuras?">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>  
+                </form>
+            </div>
+        </div>
+
+        <div class="bloco-direita">
+            <div class="contacto-topo">
+                <span><i class="fa-solid fa-phone"></i> 910 440 572</span>
+            </div>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/p/DWI7pxhCA7O/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/cantinhodasla/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://wa.me/351910440572" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+</div>
+        </div>
+
     </div>
 </header>
 
@@ -26,8 +56,9 @@
                 <a href="#">Produtos ▾</a>
                 <ul class="submenu">
                     <li><a href="Produtos/Canecas.html">Canecas</a></li>
-                    <li><a href="Produtos/T-Shirts.html">T-Shirts</a></li>
+                    <li><a href="Produtos/tshirts.html">T-Shirts</a></li>
                     <li><a href="Produtos/Canetas.html">Canetas</a></li>
+                    <li><a href="Produtos/PortaChaves.html">Porta-Chaves</a></li>
                     <li><a href="Produtos/Imans.html">Ímanes de Frigorifico</a></li>
                     <li><a href="Produtos/Sacos.html">Sacos</a></li>
                     <li><a href="Produtos/Puzzles.html">Puzzles</a></li>
@@ -36,7 +67,7 @@
                 </ul>
             </li>
             <li class="tem-submenu">
-                <a href="#">Packs ▾</a>
+                <a href="#">Temas ▾</a>
                 <ul class="submenu">
                     <li><a href="#">Dia da Mãe</a></li>
                     <li><a href="#">Dia do Pai</a></li>
@@ -52,12 +83,12 @@
                     <li><a href="#">Professores</a></li>
                 </ul>
             </li>
-            <li><a href="novidades.html">Novidades</a></li>
-            <li><a href="portofolio.html">Portofólio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
         <ul class="menu-direita">
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contacto.html">Contacto</a></li> 
+            <li><a href="mercadinhodasla.html">Mercadinho</a></li>
+            <li><a href="galeria.html">Galeria</a></li> 
         </ul>
     </div>
 </nav>
@@ -77,6 +108,9 @@
         </div>
         <div class="swiper-slide">
             <img src="img/Canetas.png" alt="Canetas Personalizadas">
+        </div>
+        <div class="swiper-slide">
+            <img src="img/PortaChaves.png" alt="Porta-Chaves Personalizados">
         </div>
         <div class="swiper-slide">
             <img src="img/Ímanes.png" alt="Ímanes de Frigorifico">

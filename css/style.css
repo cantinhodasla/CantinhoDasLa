@@ -1,42 +1,108 @@
-header {
+/* --- ESTRUTURA GERAL DO HEADER --- */
+.header-topo {
     background-color: white;
-    color: white;
-    padding: 10px 0; /* Espaçamento em cima e em baixo */
-    width: 100%;
+    padding: 8px 0; /* Header mais fino */
+    border-bottom: 1px solid #f0f0f0;
 }
-/* A INTERFACE (O "contentor" que centra tudo) */
-header .interface {
+
+.header-topo .interface {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; /* Logo à esquerda, Menu à direita */
-    max-width: 100%; /* Ocupa a largura total */
-    margin: 0 auto;
-    padding: 0 px; /* Margem de segurança para telemóveis */
+    max-width: 100%;
+    padding: 0 30px; /* Afasta ligeiramente das bordas do ecrã */
 }
-/* Faz o logo e o texto ficarem lado a lado */
-.logo a {
+
+/* --- BLOCO ESQUERDA (Logo) --- */
+.bloco-logo {
+    flex: 1;
     display: flex;
-    align-items: center; /* Centra o texto verticalmente em relação ao logo */
-    text-decoration: none; /* Tira o sublinhado do nome do site */
-    gap: 15px; /* Dá um espaço entre a imagem e o texto */
+    justify-content: flex-start;
 }
-/* Efeito opcional ao passar o rato no nome/logo */
-.logo a:hover .nome-site {
-    color: #3498db; /* O nome muda de cor junto com o menu */
-}
-/* Mantém o tamanho do logo controlado */
-.logo img {
-    height: 90px;
+
+.bloco-logo img {
+    height: 60px; /* Tamanho reduzido e elegante */
     width: auto;
 }
-/* Estiliza o texto do nome do site */
-.nome-site {
-    color: #2c3e50;
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px; /* Dá um ar mais moderno ao texto */
+
+/* --- BLOCO CENTRAL (Pesquisa Larga) --- */
+.bloco-central {
+    flex: 3; /* Aumenta de 2 para 3 para dar mais "prioridade" ao centro */
+    display: flex;
+    justify-content: center;
+}
+.barra-pesquisa button {
+    background: transparent; /* Remove o fundo cinza */
+    border: none;            /* Remove a borda quadrada */
+    padding: 0 10px;         /* Dá um pequeno espaço lateral */
+    cursor: pointer;         /* Muda o rato para a "mãozinha" */
+    color: #777;             /* Cor da lupa */
+    font-size: 1.1rem;       /* Tamanho da lupa */
     transition: 0.3s;
 }
+.barra-pesquisa button:hover {
+    color: #3498db;          /* A lupa muda de cor ao passar o rato */
+    transform: scale(1.1);   /* Dá um leve efeito de crescimento */
+}
+.barra-pesquisa form {
+    display: flex;
+    align-items: center;    /* Centra a lupa verticalmente em relação ao texto */
+    background: #f2f2f2;
+    border-radius: 50px;
+    padding: 5px 20px;
+    width: 100%;
+    max-width: 800px;
+    transition: 0.3s;
+    border: 1px solid transparent; /* Borda transparente para evitar "pular" ao focar */
+}
+
+/* Opcional: Efeito quando clicas na barra para ela se destacar mais */
+.barra-pesquisa form:focus-within {
+    max-width: 850px;   /* Ela "estica" ligeiramente mais quando ganha foco */
+    background: #fff;
+    border-color: #3498db;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.barra-pesquisa input {
+    flex: 1; /* Ocupa todo o espaço antes da lupa */
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* --- BLOCO DIREITA (Contactos e Redes) --- */
+.bloco-direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha tudo à direita */
+    gap: 4px;
+}
+
+.contacto-topo {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 12px;
+}
+
+.redes-sociais a {
+    color: #333;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #3498db; /* Cor de destaque ao passar o rato */
+}
+
 /* BARRA DE CATEGORIAS */
 .barra-categorias {
     background-color: #34495e; /* Tom diferente para destacar do header */
@@ -186,4 +252,97 @@ footer p {
     margin: 5px 0;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+/* ============================================================
+   TEMA INFANTIL (MERCADINHA DA LA) 
+   ============================================================ */
+.tema-infantil {
+    --cor-primaria: #FFB6C1; /* Rosa pastel */
+    --cor-secundaria: #98FB98; /* Verde menta */
+    --cor-fundo: #FFF9F0; /* Creme suave */
+}
+
+/* Alterar o fundo do site */
+body.tema-infantil {
+    background-color: var(--cor-fundo);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive; /* Fonte mais lúdica */
+}
+
+/* Alterar a Barra de Pesquisa no Mercadinho */
+.tema-infantil .barra-pesquisa form {
+    background-color: #ffffff;
+    border: 2px dashed var(--cor-primaria); /* Borda tracejada como trabalhos de escola */
+    border-radius: 20px; /* Menos "comprida", mais "fofinha" */
+}
+
+/* Alterar a Barra de Categorias (Menu) */
+.tema-infantil .barra-categorias {
+    background-color: var(--cor-primaria); /* Muda o azul escuro para rosa */
+}
+
+/* Alterar os Botões */
+.tema-infantil .btn-reserva {
+    background-color: var(--cor-secundaria);
+    border-radius: 50px;
+    box-shadow: 0 4px 0 #7acc7a; /* Efeito de botão de brincar */
+}
+
+.tema-infantil .bloco-logo img {
+    content: url('img/Logotipo-Infantil.png');
+}
+.tema-infantil .header-topo {
+    background-image: radial-gradient(#FFD1DC 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* ============================================================
+   TEMA GALERIA (ARTE & EXPOSIÇÃO) 
+   ============================================================ */
+
+/* 1. Fundo que lembra uma parede de galeria ou papel de desenho */
+body.tema-galeria {
+    background-color: #f8f8f8; 
+    color: #222;
+    font-family: 'Georgia', serif; /* Uma fonte com serifa para um ar mais "curatorial" */
+}
+
+/* 2. Barra de Categorias (Menu) - Estilo Minimalista */
+.tema-galeria .barra-categorias {
+    background-color: #1a1a1a; /* Preto profundo, como as molduras de galeria */
+    border-bottom: 2px solid #d4af37; /* Um toque de "ouro" (opcional) */
+}
+
+/* 3. Barra de Pesquisa - Estilo "Sketch" */
+.tema-galeria .barra-pesquisa form {
+    background-color: transparent;
+    border: 1px solid #333; /* Linha fina e preta */
+    border-radius: 020px;        /* Retira o redondo, deixa quadrado e moderno */
+    padding: 2px 10px;
+}
+
+.tema-galeria .barra-pesquisa button {
+    color: #333;
+}
+
+/* 4. O Swiper da Galeria (As Telas) */
+.tema-galeria .swiper-slide img {
+    border: 15px solid white; /* Moldura de "Passepartout" */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Sombra para parecer que a tela está pendurada */
+    background-color: white;
+    padding: 10px; /* Espaço entre a moldura e a imagem */
+    transition: transform 0.5s;
+}
+
+.tema-galeria .swiper-slide:hover img {
+    transform: scale(1.02); /* Leve aproximação ao admirar a obra */
+}
+
+/* 5. Footer da Galeria */
+.tema-galeria footer {
+    background-color: #1a1a1a;
+    border-top: 5px solid #333;
+}
+
+.tema-galeria .swiper {
+    cursor: crosshair; /* Mira de precisão para observar detalhes */
 }
