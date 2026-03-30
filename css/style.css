@@ -1,0 +1,189 @@
+header {
+    background-color: white;
+    color: white;
+    padding: 10px 0; /* Espaçamento em cima e em baixo */
+    width: 100%;
+}
+/* A INTERFACE (O "contentor" que centra tudo) */
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo à esquerda, Menu à direita */
+    max-width: 100%; /* Ocupa a largura total */
+    margin: 0 auto;
+    padding: 0 px; /* Margem de segurança para telemóveis */
+}
+/* Faz o logo e o texto ficarem lado a lado */
+.logo a {
+    display: flex;
+    align-items: center; /* Centra o texto verticalmente em relação ao logo */
+    text-decoration: none; /* Tira o sublinhado do nome do site */
+    gap: 15px; /* Dá um espaço entre a imagem e o texto */
+}
+/* Efeito opcional ao passar o rato no nome/logo */
+.logo a:hover .nome-site {
+    color: #3498db; /* O nome muda de cor junto com o menu */
+}
+/* Mantém o tamanho do logo controlado */
+.logo img {
+    height: 90px;
+    width: auto;
+}
+/* Estiliza o texto do nome do site */
+.nome-site {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px; /* Dá um ar mais moderno ao texto */
+    transition: 0.3s;
+}
+/* BARRA DE CATEGORIAS */
+.barra-categorias {
+    background-color: #34495e; /* Tom diferente para destacar do header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.barra-categorias .interface {
+    display: flex;
+    justify-content: space-between; /* Separa os dois grupos para as extremidades */
+    align-items: center;
+}
+.menu-principal {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-principal > li {
+    position: relative; /* Necessário para o submenu alinhar por aqui */
+}
+.menu-principal > li > a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.menu-principal > li:hover > a {
+    background-color: #2c3e50;
+}
+/* MOSTRAR O SUBMENU NO HOVER */
+.tem-submenu:hover .submenu {
+    display: block; /* MOSTRA */
+}
+/* CONFIGURAÇÃO DO SUBMENU (Escondido por padrão) */
+.submenu {
+    display: none;      /* ESCONDE */
+    position: absolute; /* Aparece por cima do banner */
+    top: 100%;          /* Logo abaixo do item pai */
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.submenu li a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.submenu li a:hover {
+    background-color: #f4f4f4;
+    color: #3498db;
+}
+.menu-direita {
+    margin-left: auto; /* MÁGICA: Empurra este item e os seguintes para a direita */
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-direita > li > a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.menu-direita > li:hover > a {
+    background-color: #2c3e50;
+}
+.swiper {
+    margin-top: 20px; /* Altera o valor para o espaço que desejares */
+    width: 100%;
+    height: 500px; /* Altura do seu carrossel */
+}
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: flex;
+    width: 80%;               /* Define uma largura fixa */
+    height: 500px;            /* Força uma altura fixa */
+    margin: 0 auto;           /* Centraliza a imagem dentro do slide */
+    max-width: 1200px;        /* Limita a largura máxima para evitar que fique muito grande em telas maiores */
+    object-fit: contain;      /* Faz a imagem preencher o espaço sem distorcer */
+    justify-content: center;  /* Centra horizontalmente */
+    object-position: center;  /* Centra a parte mais importante da foto */
+}
+/* Garante que as setas são visíveis e têm uma cor contrastante */
+.swiper-button-next{
+    color: #3498db !important;/* Use a cor do seu site */
+    transform: scale(0.8);      /* Diminui um pouco para telemóvel */
+    right: 10px !important;      /* Ajusta a posição da seta esquerda para não fugir do ecrã */
+}
+.swiper-button-prev {
+    color: #3498db !important;/* Use a cor do seu site */
+    transform: scale(0.8);      /* Diminui um pouco para telemóvel */
+    left: 10px !important;      /* Ajusta a posição da seta esquerda para não fugir do ecrã */
+}
+.swiper-pagination {
+    bottom: 10px !important;    /* Espaço em relação ao fundo da imagem */
+    width: 100% !important;     /* Garante que ocupa a largura toda */
+    left: 0 !important;
+    display: flex;
+    justify-content: center;    /* Alinhamento horizontal perfeito */
+    align-items: center;
+}
+/* Estilo extra para os pontos ficarem mais modernos */
+.swiper-pagination-bullet {
+    background: #ffffff !important;
+    opacity: 0.7;
+}
+.swiper-pagination-bullet-active {
+    background: #3498db !important;
+    opacity: 1;
+    width: 20px;               /* Faz o ponto ativo ser um "risquinho" (opcional) */
+    border-radius: 5px;
+}
+footer {
+    margin-top: 20px; /* Altera o valor para o espaço que desejares */
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 20px;
+    width: 100%;
+    
+    /* O SEGREDO DO CENTRO */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos (texto, ícones) um por cima do outro */
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;      /* Garante que as linhas de texto também centram */
+    
+    /* Evita que o footer "fuja" para a direita no telemóvel */
+    box-sizing: border-box; 
+}
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

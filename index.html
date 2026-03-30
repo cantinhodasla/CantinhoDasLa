@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho das La</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<header class="header-topo">
+    <div class="interface">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/Logotipo.png" alt="Logo">
+                <span class="nome-site">CANTINHO DAS LA</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<nav class="barra-categorias">
+    <div class="interface">
+        <ul class="menu-principal">
+            <li class="tem-submenu">
+                <a href="#">Produtos ▾</a>
+                <ul class="submenu">
+                    <li><a href="Produtos/Canecas.html">Canecas</a></li>
+                    <li><a href="Produtos/T-Shirts.html">T-Shirts</a></li>
+                    <li><a href="Produtos/Canetas.html">Canetas</a></li>
+                    <li><a href="Produtos/Imans.html">Ímanes de Frigorifico</a></li>
+                    <li><a href="Produtos/Sacos.html">Sacos</a></li>
+                    <li><a href="Produtos/Puzzles.html">Puzzles</a></li>
+                    <li><a href="Produtos/Tapetes.html">Tapetes de Rato</a></li>
+                    <li><a href="Produtos/Chapeus.html">Chapeus</a></li>
+                </ul>
+            </li>
+            <li class="tem-submenu">
+                <a href="#">Packs ▾</a>
+                <ul class="submenu">
+                    <li><a href="#">Dia da Mãe</a></li>
+                    <li><a href="#">Dia do Pai</a></li>
+                    <li><a href="#">Dia dos Avós</a></li>
+                    <li><a href="#">Dia dos Namorados</a></li>
+                    <li><a href="#">Dia da Animal</a></li>
+                    <li><a href="#">Pascoa</a></li>
+                    <li><a href="#">Halloween</a></li>
+                    <li><a href="#">Natal</a></li>
+                    <li><a href="#">Mundial Futebol 2026</a></li>
+                    <li><a href="#">Aniversários</a></li>
+                    <li><a href="#">Casa Nova</a></li>
+                    <li><a href="#">Professores</a></li>
+                </ul>
+            </li>
+            <li><a href="novidades.html">Novidades</a></li>
+            <li><a href="portofolio.html">Portofólio</a></li>
+        </ul>
+        <ul class="menu-direita">
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contacto.html">Contacto</a></li> 
+        </ul>
+    </div>
+</nav>
+
+<div class="swiper meuCarrossel">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="produtos/canecas.html"></a>
+            <img src="img/Canecas.png" alt="Canecas Personalizadas">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <img src="img/T-shirts .jpg" alt="T-shirts Personalizadas">
+        </div>
+        <div class="swiper-slide">
+            <img src="img/Canetas.png" alt="Canetas Personalizadas">
+        </div>
+        <div class="swiper-slide">
+            <img src="img/Imans.jpg" alt="Ímanes de Frigorifico">
+        </div>
+        <div class="swiper-slide">
+            <img src="img/Sacos.jpg" alt="Sacos Personalizados">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+    const swiper = new Swiper('.meuCarrossel', {
+        loop: true,               // Faz o carrossel ser infinito
+        autoplay: {
+            delay: 4000,          // Muda a cada 4 segundos
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
+
+</body>
+
+<footer>
+    <p>&copy; 2026 Cantinho das La - Todos os direitos reservados.</p>
+</footer>
+
+</html>
