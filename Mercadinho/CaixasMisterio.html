@@ -145,7 +145,7 @@
                         <label for="qtd-caixa-02">Qtd:</label>
                         <input type="number" id="qtd-caixa-02" value="1" min="1">
                     </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caixa Mistério 2', 2.00, '../img/mercado/box.png', 'qtd-caixa-2')">
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caixa Mistério 2', 2.00, '../img/mercado/box.png', 'qtd-caixa-02')">
                         <i class="fa-solid fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
@@ -163,7 +163,7 @@
                         <label for="qtd-caixa-05">Qtd:</label>
                         <input type="number" id="qtd-caixa-05" value="1" min="1">
                     </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caixa Mistério 5', 5.00, '../img/mercado/box.png', 'qtd-caixa-5')">
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caixa Mistério 5', 5.00, '../img/mercado/box.png', 'qtd-caixa-05')">
                         <i class="fa-solid fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
@@ -262,23 +262,37 @@
     }
 
     // Adicionar ao Carrinho
-    function adicionarAoCarrinho(nome, preco, imagem, inputId) {
-        const qtdInput = document.getElementById(inputId);
-        const quantidade = qtdInput ? parseInt(qtdInput.value) : 1;
+function adicionarAoCarrinho(nome, preco, imagem, inputId) {
+    // 1. Capturar o input de quantidade
+    const qtdInput = document.getElementById(inputId);
+    
+    // 2. Converter para número (garantir que é pelo menos 1)
+    const quantidadeAdicional = parseInt(qtdInput.value) || 1;
 
-        const index = carrinho.findIndex(item => item.nome === nome);
+    // 3. Verificar se o produto já existe no carrinho
+    const index = carrinho.findIndex(item => item.nome === nome);
 
-        if (index !== -1) {
-            carrinho[index].quantidade += quantidade;
-        } else {
-            carrinho.push({ nome, preco, imagem, quantidade });
-        }
-
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        atualizarContador();
-        abrirCarrinho();
-        if(qtdInput) qtdInput.value = 1; 
+    if (index !== -1) {
+        // SE JÁ EXISTE: Soma a nova quantidade à que já lá estava
+        carrinho[index].quantidade += quantidadeAdicional;
+    } else {
+        // SE É NOVO: Adiciona com a quantidade selecionada
+        carrinho.push({ 
+            nome: nome, 
+            preco: preco, 
+            imagem: imagem, 
+            quantidade: quantidadeAdicional 
+        });
     }
+
+    // 4. Salvar e Atualizar
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    atualizarContador();
+    abrirCarrinho();
+    
+    // 5. Resetar o input do card para 1
+    qtdInput.value = 1;
+}
 
     // Desenhar Itens no Carrinho
 function renderizarCarrinho() {
@@ -302,7 +316,7 @@ function renderizarCarrinho() {
 
     listaItens.innerHTML = carrinho.length === 0 ? '<p style="text-align:center; padding:20px;">O carrinho está vazio</p>' : htmlGerado;
     totalElemento.innerText = totalAcumulado.toFixed(2) + "€";
-}
+}   
 
     function removerItem(index) {
         carrinho.splice(index, 1);
@@ -330,9 +344,9 @@ function enviarPedidoEmail(event) {
     btn.innerText = "A enviar...";
     btn.disabled = true;
 
-    // Criar a lista de produtos real
-    let resumoProdutos = carrinho.map(item => 
-        `${item.quantidade}x ${item.nome} (${(item.preco * item.quantidade).toFixed(2)}€)`
+    // GERAR LISTA DE PRODUTOS PARA O EMAIL
+    let resumoTexto = carrinho.map(item => 
+        `${item.quantidade}x ${item.nome} - ${(item.preco * item.quantidade).toFixed(2)}€`
     ).join("\n");
 
     const totalFinal = document.getElementById('total-modal').innerText;
@@ -340,14 +354,14 @@ function enviarPedidoEmail(event) {
     const templateParams = {
         nome: document.getElementById('nome-cliente').value,
         email: document.getElementById('email-cliente').value,
-        tel: document.getElementById('tel-cliente').value, // Verifica se tens este ID no input
-        resumo: resumoProdutos,
-        total: totalFinal
+        tel: document.getElementById('tel-cliente').value,
+        resumo: resumoTexto, // Envia a lista real
+        total: totalFinal    // Envia o total real
     };
 
-    // ATENÇÃO: Verifica se o Service ID e Template ID estão corretos no teu painel EmailJS
-    emailjs.send("service_yxgdwtw", "template_xyz456", templateParams)
-        .then(function(response) {
+    // AQUI USAS O TEU SERVICE ID E O TEU TEMPLATE ID (do painel EmailJS)
+    emailjs.send("service_yxgdwtw", "template_rw07z9y", templateParams)
+        .then(function() {
            alert("Pedido enviado com sucesso!");
            carrinho = [];
            localStorage.removeItem('carrinho');
@@ -356,7 +370,7 @@ function enviarPedidoEmail(event) {
            btn.innerText = "Confirmar e Enviar Pedido";
            btn.disabled = false;
         }, function(error) {
-           alert("Erro ao enviar: " + JSON.stringify(error));
+           alert("Erro: " + error.text);
            btn.innerText = "Confirmar e Enviar Pedido";
            btn.disabled = false;
         });
