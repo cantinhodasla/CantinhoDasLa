@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canecas Personalizadas | Cantinho das La</title>
+    <title>Pequenos Tesouros | Cantinho das La</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -18,6 +18,7 @@
 
 <body class="tema-infantil">
 
+    <!--  Cabeçalho  -->
     <header class="header-topo">
         <div class="interface">
             <div class="bloco-logo">
@@ -59,13 +60,13 @@
             </div>
         </div>
     </header>
-
-<nav class="barra-categorias">
+    <!--  Barra de Menu  -->
+    <nav class="barra-categorias">
     <div class="interface">
         <div class="menu-col-esquerda">
             <ul class="menu-lista">
                 <li class="tem-submenu">
-                    <a href="#">Marcado <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#">Mercado <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="submenu">
                         <li><a href="../Mercadinho/PequenosTesouros.html">Pequenos Tesouros</a></li>
                         <li><a href="../Mercadinho/SegundasOportunidades.html">Segundas Oportunidades</a></li>
@@ -91,17 +92,17 @@
             </ul>
         </div>
     </div>
-</nav>
-
+    </nav>
+    <!--  Banner  -->
     <section class="banner-categoria" style="background-image: url('../img/mercado/LojaNovos.webp')">
         <div class="interface">
             <div class="banner-texto">
                 <h1>Pequenos Tesouros</h1>
-                <p>Aproveite a diversão com os nossos pequenos tesouros!</p>
+                <p>Aproveite a loja de produtos novos!</p>
             </div>
         </div>
     </section>
-
+    <!--  Barra de Caminho  -->
     <div class="barra-caminho">
         <div class="interface">
             <ul>
@@ -110,78 +111,106 @@
             </ul>
         </div>
     </div>
-
+    <!--  Grilha de Produtos  -->
     <main class="seccao-produtos">
         <div class="interface">
             <div class="grelha-produtos">
                 <div class="produto-card"> 
                     <div class="produto-imagem">
-                        <img src="../img/mercado/Produtos/Pulseira N01.png" alt="Pulseira Nova 01">
+                        <img src="../img/mercado/Produtos/Pulseira 01.png" alt="Pulseira 01" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/mercado/Produtos/Pulseira 01.png', 
+                                'Pulseira 01', 
+                                'Esta pulseira incrível é perfeita para quem gosta de acessórios únicos. Ideal para oferecer a amigos ou familiares!', 
+                                1.00
+                        )">
                     </div>
                     <div class="produto-info">
-                        <h3>Pulseira Nova 01</h3>
+                        <h3>Pulseira 01</h3>
                         <div class="produto-preco">
-                        <strong>1,00€</strong>
+                        <strong>1.00€</strong>
                     </div>
                     <div class="seletor-quantidade">
-                        <label for="qtd-Novo-01">Qtd:</label>
-                        <input type="number" id="qtd-Novo-01" value="1" min="1">
+                        <label for="qtd-Arte-01">Qtd:</label>
+                        <input type="number" id="qtd-Arte-01" value="1" min="1">
                     </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pulseira Nova 01', 1.00, '../img/mercado/Produtos/Pulseira N01.png', 'qtd-Novo-01')">
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pulseira 01', 1.00, '../img/mercado/Produtos/Pulseira 01.png', 'qtd-Arte-01')">
                         <i class="fa-solid fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
                 </div>
                 <div class="produto-card"> 
                     <div class="produto-imagem">
-                        <img src="../img/mercado/Produtos/Pulseira N01.png" alt="Pulseira Nova 02">
+                        <img src="../img/mercado/Produtos/Pulseira 01.png" alt="Pulseira 02" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/mercado/Produtos/Pulseira 01.png', 
+                                'Pulseira 02', 
+                                'Esta pulseira incrível é perfeita para quem gosta de acessórios únicos. Ideal para oferecer a amigos ou familiares!', 
+                                1.00
+                        )">
                     </div>
                     <div class="produto-info">
-                        <h3>Pulseira Nova 02</h3>
+                        <h3>Pulseira 02</h3>
                         <div class="produto-preco">
-                        <strong>2,00€</strong>
+                        <strong>1.00€</strong>
                     </div>
                     <div class="seletor-quantidade">
-                        <label for="qtd-Novo-02">Qtd:</label>
-                        <input type="number" id="qtd-Novo-02" value="1" min="1">
+                        <label for="qtd-Arte-02">Qtd:</label>
+                        <input type="number" id="qtd-Arte-02" value="1" min="1">
                     </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pulseira Nova 02', 2.00, '../img/mercado/Produtos/Pulseira N01.png', 'qtd-Novo-02')">
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pulseira 02', 1.00, '../img/mercado/Produtos/Pulseira 01.png', 'qtd-Arte-02')">
                         <i class="fa-solid fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
                 </div>
                 <div class="produto-card"> 
                     <div class="produto-imagem">
-                        <img src="../img/mercado/Produtos/Pulseira N01.png" alt="Pulseira Nova 03">
+                        <img src="../img/mercado/Produtos/Colar 01.png" alt="Colar 01" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/mercado/Produtos/Colar 01.png', 
+                                'Colar 01', 
+                                'Este colar incrível é perfeito para quem gosta de acessórios únicos. Ideal para oferecer a amigos ou familiares!', 
+                                2.00
+                        )">
                     </div>
                     <div class="produto-info">
-                        <h3>Pulseira Nova 03</h3>
+                        <h3>Colar 01</h3>
                         <div class="produto-preco">
-                        <strong>3,00€</strong>
+                        <strong>2.00€</strong>
                     </div>
                     <div class="seletor-quantidade">
-                        <label for="qtd-Novo-03">Qtd:</label>
-                        <input type="number" id="qtd-Novo-03" value="1" min="1">
+                        <label for="qtd-Arte-03">Qtd:</label>
+                        <input type="number" id="qtd-Arte-03" value="1" min="1">
                     </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pulseira Nova 03', 3.00, '../img/mercado/Produtos/Pulseira N01.png', 'qtd-Novo-03')">
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Colar 01', 2.00, '../img/mercado/Produtos/Colar 01.png', 'qtd-Arte-02')">
                         <i class="fa-solid fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
                 </div>
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        <img src="../img/mercado/Produtos/Pulseira N01.png" alt="Pulseira Nova 04">
+                        <img src="../img/mercado/Produtos/Iman 01.png" alt="Íman de Frigorífico" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/mercado/Produtos/Iman 01.png', 
+                                'Íman de Frigorífico', 
+                                'Este íman incrível é perfeito para quem gosta de acessórios únicos. Ideal para oferecer a amigos ou familiares!', 
+                                1.00
+                        )">
                     </div>
                     <div class="produto-info">
-                        <h3>Pulseira Nova 04</h3>
+                        <h3>Iman de Frigorífico</h3>
                         <div class="produto-preco">
-                        <strong>4,00€</strong>
+                        <strong>3.00€</strong>
                     </div>
                     <div class="seletor-quantidade">
-                        <label for="qtd-Novo-04">Qtd:</label>
-                        <input type="number" id="qtd-Novo-04" value="1" min="1">
+                        <label for="qtd-Arte-04">Qtd:</label>
+                        <input type="number" id="qtd-Arte-04" value="1" min="1">
                     </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pulseira Nova 04', 4.00, '../img/mercado/Produtos/Pulseira N01.png', 'qtd-Novo-04')">
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Iman de Frigorífico', 3.00, '../img/mercado/Produtos/Iman 01.png', 'qtd-Arte-03')">
                         <i class="fa-solid fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
@@ -189,7 +218,17 @@
             </div>
         </div>
     </main>
-
+    <!--  Popup Detalhe Produto  -->
+    <div id="modal-detalhes" class="modal" style="display: none;">
+        <div class="modal-content" style="text-align: center; max-width: 400px;">
+            <span class="close-modal" onclick="fecharDetalhes()">&times;</span>
+            <img id="detalhe-img" src="" alt="Imagem do Produto" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <h2 id="detalhe-titulo" style="color: #333; margin-bottom: 10px;"></h2>
+            <p id="detalhe-descricao" style="color: #666; font-size: 0.95rem; margin-bottom: 15px; line-height: 1.5;"></p>
+            <p id="detalhe-preco" style="font-weight: bold; font-size: 1.4rem; color: #D87093; margin-bottom: 20px;"></p>
+        </div>
+    </div>
+    <!--  Popup Carrinho  -->
     <div id="side-cart" class="cart-sidebar">
         <div class="cart-header">
             <h3>O Teu Pedido</h3>
@@ -203,57 +242,23 @@
                     Finalizar Compra
                 </button>
             </div>
-        </div>
-
-    <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()"></div>
-
-<div id="modal-checkout" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="fecharModalCheckout()">&times;</span>
-        <h2>Finalizar Pedido</h2>
-        <p>Preenche os teus dados para processarmos a encomenda.</p>
-        
-        <form id="form-checkout" onsubmit="enviarPedidoEmail(event)">
-            <div class="campo">
-                <label>Nome Completo*</label>
-                <input type="text" id="nome-cliente" required placeholder="Ex: Maria Silva">
-            </div>
-            <div class="campo">
-                <label>E-mail*</label>
-                <input type="email" id="email-cliente" required placeholder="teu@email.com">
-            </div>
-            <div class="campo">
-                <label>Telemóvel</label>
-                <input type="tel" id="tel-cliente" placeholder="912 345 678">
-            </div>
-            <div class="campo">
-                <label>Morada de Envio (Opcional)</label>
-                <textarea id="morada-cliente" rows="2"></textarea>
-            </div>
-            
-            <div class="resumo-final">
-                <span>Total a pagar: </span>
-                <strong id="total-modal">0.00€</strong>
-            </div>
-
-            <button type="submit" class="btn-enviar-final">Confirmar e Enviar Pedido</button>
-        </form>
     </div>
-</div>
-
-<footer class="rodape-principal">
-    <div class="interface">
-        <div class="footer-conteudo">
-            <p>&copy; 2026 Cantinho das La - Todos os direitos reservados.</p>
-            <div class="footer-links">
-                <a href="#">Privacidade</a>
-                <a href="#">Termos e Condições</a>
+    <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()">
+    </div>
+    <!--  Rodapé  -->
+    <footer class="rodape-principal">
+        <div class="interface">
+            <div class="footer-conteudo">
+                <p>&copy; 2026 Cantinho das La - Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos e Condições</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-
-<script>
+    </footer>
+    <!--  Scripts  -->
+    <script>
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
     // Controlos de Interface
@@ -382,8 +387,39 @@ function enviarPedidoEmail(event) {
            btn.disabled = false;
         });
 }
+// Função para abrir o modal e preencher os dados
+function abrirDetalhes(imagem, titulo, descricao, preco) {
+    // 1. Substituir os elementos no modal com as informações recebidas
+    document.getElementById('detalhe-img').src = imagem;
+    document.getElementById('detalhe-titulo').innerText = titulo;
+    document.getElementById('detalhe-descricao').innerText = descricao;
+    document.getElementById('detalhe-preco').innerText = parseFloat(preco).toFixed(2) + '€';
+
+    // 3. Mostrar o modal
+    document.getElementById('modal-detalhes').style.display = 'flex'; // ou 'block' dependendo do teu CSS
+}
+
+// Função para fechar o modal de detalhes
+function fecharDetalhes() {
+    document.getElementById('modal-detalhes').style.display = 'none';
+}
+// Fechar o modal ao clicar fora da caixa branca (no fundo escuro)
+window.addEventListener('click', function(event) {
+    const modalDetalhes = document.getElementById('modal-detalhes');
+    const modalCheckout = document.getElementById('modal-checkout');
+
+    // Verifica se o clique foi no fundo do modal de Detalhes
+    if (event.target === modalDetalhes) {
+        fecharDetalhes();
+    }
+
+    // Já agora, aplicamos a mesma lógica para o modal de Checkout!
+    if (event.target === modalCheckout) {
+        fecharTudo(); // Ou a função que usas para fechar o checkout
+    }
+});
     window.onload = atualizarContador;
-</script>
+    </script>
   
 </body>
 </html>

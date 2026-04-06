@@ -14,7 +14,8 @@ body {
 }
 
 .interface {
-    max-width: 100%; /* Corrigido de 100% para 1200px e adicionado ; */
+    max-width: 1600px; /* Fica encostado aos lados na maioria dos portáteis/PCs, mas protege de ecrãs gigantes */
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -773,7 +774,6 @@ body.tema-galeria .btn-adicionar:hover {
     margin-top: 50px;
     border-top: 5px solid #3498db;
     text-align: center;
-    gap: 20px; /* ISTO: Cria o espaço exato entre o texto e os links */
 }
 
 .footer-links a {
@@ -789,7 +789,6 @@ body.tema-infantil .rodape-principal {
     background-color: #FFF0F5; /* Rosa Lavanda muito claro */
     color: #D87093; /* Rosa forte para o texto */
     border-top: 8px dotted #FFB6C1; /* Borda pontilhada "fofinha" */
-    gap: 20px; /* ISTO: Cria o espaço exato entre o texto e os links */
 }
 
 body.tema-infantil .footer-links a {
@@ -805,7 +804,6 @@ body.tema-galeria .rodape-principal {
     border-top: 2px solid #d4af37;
     letter-spacing: 2px;
     text-transform: uppercase;
-    gap: 20px; /* ISTO: Cria o espaço exato entre o texto e os links */
 }
 
 body.tema-galeria .footer-links a {
