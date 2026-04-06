@@ -817,3 +817,35 @@ body.tema-galeria .footer-links a:hover {
     background: #d4af37;
     color: #1a1a1a;
 }
+/* Estilos para o Banner Rotativo */
+.banner-rotativo {
+    width: 100%;
+    height: 300px;
+}
+
+.banner-rotativo .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+/* Máscara escura para o texto não sumir no fundo */
+.banner-rotativo .swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* Cores dos botões e paginação */
+.swiper-button-next, .swiper-button-prev {
+    color: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff !important;
+}

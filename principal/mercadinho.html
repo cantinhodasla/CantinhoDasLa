@@ -18,6 +18,7 @@
 
 <body class="tema-infantil">
 
+    <!--  Cabeçalho  -->
     <header class="header-topo">
         <div class="interface">
             <div class="bloco-logo">
@@ -59,7 +60,7 @@
             </div>
         </div>
     </header>
-
+    <!--  Barra de Menu  -->
     <nav class="barra-categorias">
     <div class="interface">
         <div class="menu-col-esquerda">
@@ -92,7 +93,7 @@
         </div>
     </div>
     </nav>
-
+    <!--  Banner  -->
     <section class="banner-categoria" style="background-image: url('../img/mercado/LojaArtesanato.webp">
         <div class="interface">
             <div class="banner-texto">
@@ -101,16 +102,7 @@
             </div>
         </div>
     </section>
-
-    <div class="barra-caminho">
-        <div class="interface">
-            <ul>
-                <li><a href="../principal/mercadinho.html">Mercadinho</a></li>
-                <li><i class="fa-solid fa-chevron-right"></i></li>
-            </ul>
-        </div>
-    </div>
-    
+    <!--  Popup Carrinho  -->
     <div id="side-cart" class="cart-sidebar">
         <div class="cart-header">
             <h3>O Teu Pedido</h3>
@@ -125,11 +117,9 @@
                 </button>
             </div>
     </div>
-
     <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()">
-
     </div>
-
+    <!--  Popup Finalizar Compra  -->
     <div id="modal-checkout" class="modal">
     <div class="modal-content">
         <span class="close-modal" onclick="fecharTudo()">&times;</span>
@@ -163,7 +153,7 @@
         </form>
     </div>
     </div>
-
+    <!--  Rodapé  -->
     <footer class="rodape-principal">
     <div class="interface">
         <div class="footer-conteudo">
@@ -175,7 +165,7 @@
         </div>
     </div>
     </footer>
-
+    <!--  Scripts  -->
     <script>
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 

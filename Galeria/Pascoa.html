@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tema da Pascoa | Cantinho das La</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="tema-galeria">
+
+    <!--  Cabeçalho  -->
+    <header class="header-topo">
+        <div class="interface">
+            <div class="bloco-logo">
+                <a href="../index.html">
+                    <img src="../img/Logotipo.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="bloco-central">
+                <div class="barra-pesquisa">
+                    <form action="/pesquisar" method="GET">
+                        <input type="text" name="q" placeholder="O que procuras?">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contacto-topo">
+                <span><i class="fa-solid fa-phone"></i> 910 440 572</span>
+            </div>
+
+            <div class="bloco-direita">
+                <div class="header-acoes">
+                    <div class="redes-sociais">
+                        <a href="https://www.instagram.com/cantinhodasla/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/cantinhodasla/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="cart-icon" onclick="abrirCarrinho()">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!--  Barra de Menu  -->
+    <nav class="barra-categorias">
+    <div class="interface">
+        <div class="menu-col-esquerda">
+            <ul class="menu-lista">
+                <li class="tem-submenu">
+                    <a href="#">Artistas <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li class="tem-sub-submenu">
+                            <a href="#">Desenhos da La <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Tema 01</a></li>
+                                <li><a href="#">Tema 02</a></li>
+                                <li><a href="#">Tema 03</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu">
+                            <a href="#">D. R.<i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Tema 01</a></li>
+                                <li><a href="#">Tema 02</a></li>
+                                <li><a href="#">Tema 03</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu">
+                            <a href="#">A. G. <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Tema 01</a></li>
+                                <li><a href="#">Tema 02</a></li>
+                                <li><a href="#">Tema 03</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu">
+                            <a href="#">C. G. <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Tema 01</a></li>
+                                <li><a href="#">Tema 02</a></li>
+                                <li><a href="#">Tema 03</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tem-submenu">
+                    <a href="#">Temas <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                    <li><a href="#">Dia da Mãe</a></li>
+                    <li><a href="#">Dia do Pai</a></li>
+                    <li><a href="#">Dia dos Avós</a></li>
+                    <li><a href="#">Dia dos Namorados</a></li>
+                    <li><a href="#">Dia da Animal</a></li>
+                    <li><a href="#">Pascoa</a></li>
+                    <li><a href="#">Halloween</a></li>
+                    <li><a href="#">Natal</a></li>
+                    <li><a href="#">Mundial Futebol 2026</a></li>
+                    <li><a href="#">Aniversários</a></li>
+                    <li><a href="#">Casa Nova</a></li>
+                    <li><a href="#">Professores</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>  
+
+        <div class="menu-col-central">
+            <ul class="menu-lista">
+                <li><a href="../index.html" >Personalizados</a></li>
+                <li><a href="../principal/galeria.html" class="ativo">Galeria</a></li>
+                <li><a href="../principal/mercadinho.html">Mercadinho</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-col-direita">
+            <ul class="menu-lista">
+                <li><a href="../principal/sobre.html">Sobre</a></li>
+                <li><a href="../principal/contacto.html">Contactos</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!--  Banner  -->
+    <section class="banner-categoria" style="background-image: url('../img/galeria/Pascoa/Banner.webp');">
+        <div class="interface">
+            <div class="banner-texto">
+                <h1>Pascoa</h1>
+                <p>Aproveite o nosso tema da Pascoa!</p>
+            </div>
+        </div>
+    </section>
+    <!--  Barra de Caminho  -->
+    <div class="barra-caminho"> 
+        <div class="interface">
+            <ul>
+                <li><a href="../principal/galeria.html">Galeria</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="#">Temas</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="../Galeria/Pascoa.html"><strong>Pascoa</strong></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--  Grilha de Produtos  -->
+    <main class="seccao-produtos">
+        <div class="interface">
+            <div class="grelha-produtos">
+                <div class="produto-card"> 
+                    <div class="produto-imagem">
+                        <img src="../img/galeria/Pascoa/PS01.webp" alt="PS01" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/galeria/Pascoa/PS01.webp', 
+                                'PS01', 
+                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
+                                1.00
+                        )">
+                    </div>
+                    <div class="produto-info">
+                        <h3>PS01</h3>
+                        <div class="produto-preco">
+                        <strong>1.00€</strong>
+                    </div>
+                    <div class="seletor-quantidade">
+                        <label for="qtd-PS-01">Qtd:</label>
+                        <input type="number" id="qtd-PS-01" value="1" min="1">
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS01', 1.00, '../img/galeria/Pascoa/PS01.webp', 'qtd-PS-01')">
+                        <i class="fa-solid fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                </div>
+                <div class="produto-card"> 
+                    <div class="produto-imagem">
+                        <img src="../img/galeria/Pascoa/PS02.webp" alt="PS02" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/galeria/Pascoa/PS02.webp', 
+                                'PS02', 
+                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
+                                2.00
+                        )">
+                    </div>
+                    <div class="produto-info">
+                        <h3>PS02</h3>
+                        <div class="produto-preco">
+                        <strong>2.00€</strong>
+                    </div>
+                    <div class="seletor-quantidade">
+                        <label for="qtd-PS-02">Qtd:</label>
+                        <input type="number" id="qtd-PS-02" value="1" min="1">
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS02', 2.00, '../img/galeria/Pascoa/PS02.webp', 'qtd-PS-02')">
+                        <i class="fa-solid fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                </div>
+                <div class="produto-card"> 
+                    <div class="produto-imagem">
+                        <img src="../img/galeria/Pascoa/PS05.webp" alt="PS05" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/galeria/Pascoa/PS05.webp', 
+                                'PS05', 
+                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
+                                5.00
+                        )">
+                    </div>
+                    <div class="produto-info">
+                        <h3>PS05</h3>
+                        <div class="produto-preco">
+                        <strong>5.00€</strong>
+                    </div>
+                    <div class="seletor-quantidade">
+                        <label for="qtd-PS-05">Qtd:</label>
+                        <input type="number" id="qtd-PS-05" value="1" min="1">
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS05', 5.00, '../img/galeria/Pascoa/PS05.webp', 'qtd-PS-05')">
+                        <i class="fa-solid fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="../img/galeria/Pascoa/PS13.webp" alt="PS13" 
+                            style="cursor: pointer;"
+                            onclick="abrirDetalhes(
+                                '../img/galeria/Pascoa/PS13.webp', 
+                                'PS13', 
+                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
+                                10.00
+                        )">
+                    </div>
+                    <div class="produto-info">
+                        <h3>PS13</h3>
+                        <div class="produto-preco">
+                        <strong>10.00€</strong>
+                    </div>
+                    <div class="seletor-quantidade">
+                        <label for="qtd-PS-13">Qtd:</label>
+                        <input type="number" id="qtd-PS-13" value="1" min="1">
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS13', 10.00, '../img/galeria/Pascoa/PS13.webp', 'qtd-PS-13')">
+                        <i class="fa-solid fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--  Popup Detalhe Produto  -->
+    <div id="modal-detalhes" class="modal" style="display: none;">
+    <div class="modal-content" style="text-align: center; max-width: 400px;">
+        <span class="close-modal" onclick="fecharDetalhes()">&times;</span>
+        
+        <img id="detalhe-img" src="" alt="Imagem do Produto" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+        <h2 id="detalhe-titulo" style="color: #333; margin-bottom: 10px;"></h2>
+        <p id="detalhe-descricao" style="color: #666; font-size: 0.95rem; margin-bottom: 15px; line-height: 1.5;"></p>
+        <p id="detalhe-preco" style="font-weight: bold; font-size: 1.4rem; color: #D87093; margin-bottom: 20px;"></p>
+    </div>
+    </div>
+    <!--  Popup Carrinho  -->
+    <div id="side-cart" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>O Teu Pedido</h3>
+            <span class="close-cart" onclick="fecharTudo()">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-body">
+            </div>
+        <div class="cart-footer">
+            <div class="total-area">Total: <span id="cart-total">0.00€</span></div>
+                <button class="btn-finalizar" onclick="abrirModalCheckout()">
+                    Finalizar Compra
+                </button>
+            </div>
+    </div>
+    <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()">
+    </div>
+    <!--  Popup Finalizar Compra  -->
+    <div id="modal-checkout" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="fecharTudo()">&times;</span>
+        <h2>Finalizar Pedido</h2>
+        <p>Preenche os teus dados para processarmos a encomenda.</p>
+        
+        <form id="form-checkout" onsubmit="enviarPedidoEmail(event)">
+            <div class="campo">
+                <label>Nome Completo*</label>
+                <input type="text" id="nome-cliente" required placeholder="Ex: Maria Silva">
+            </div>
+            <div class="campo">
+                <label>E-mail*</label>
+                <input type="email" id="email-cliente" required placeholder="teu@email.com">
+            </div>
+            <div class="campo">
+                <label>Telemóvel</label>
+                <input type="tel" id="tel-cliente" placeholder="912 345 678">
+            </div>
+            <div class="campo">
+                <label>Morada de Envio (Opcional)</label>
+                <textarea id="morada-cliente" rows="2"></textarea>
+            </div>
+            
+            <div class="resumo-final">
+                <span>Total a pagar: </span>
+                <strong id="total-modal">0.00€</strong>
+            </div>
+
+            <button type="submit" class="btn-enviar-final">Confirmar e Enviar Pedido</button>
+        </form>
+    </div>
+    </div>
+    <!--  Rodapé  -->
+    <footer class="rodape-principal">
+    <div class="interface">
+        <div class="footer-conteudo">
+            <p>&copy; 2026 Cantinho das La - Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos e Condições</a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!--  Scripts  -->
+    <script>
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    // Controlos de Interface
+    function abrirCarrinho() {
+        document.getElementById('side-cart').classList.add('active');
+        document.getElementById('overlay-menu').classList.add('abrir-menu');
+        renderizarCarrinho();
+    }
+
+    function fecharTudo() {
+        document.getElementById('side-cart').classList.remove('active');
+        document.getElementById('overlay-menu').classList.remove('abrir-menu');
+        document.getElementById('modal-checkout').style.display = 'none';
+    }
+
+    // Adicionar ao Carrinho
+function adicionarAoCarrinho(nome, preco, imagem, inputId) {
+    // 1. Capturar o input de quantidade
+    const qtdInput = document.getElementById(inputId);
+    
+    // 2. Converter para número (garantir que é pelo menos 1)
+    const quantidadeAdicional = parseInt(qtdInput.value) || 1;
+
+    // 3. Verificar se o produto já existe no carrinho
+    const index = carrinho.findIndex(item => item.nome === nome);
+
+    if (index !== -1) {
+        // SE JÁ EXISTE: Soma a nova quantidade à que já lá estava
+        carrinho[index].quantidade += quantidadeAdicional;
+    } else {
+        // SE É NOVO: Adiciona com a quantidade selecionada
+        carrinho.push({ 
+            nome: nome, 
+            preco: preco, 
+            imagem: imagem, 
+            quantidade: quantidadeAdicional 
+        });
+    }
+
+    // 4. Salvar e Atualizar
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    atualizarContador();
+    abrirCarrinho();
+    
+    // 5. Resetar o input do card para 1
+    qtdInput.value = 1;
+}
+
+    // Desenhar Itens no Carrinho
+function renderizarCarrinho() {
+    const listaItens = document.getElementById('cart-items');
+    const totalElemento = document.getElementById('cart-total');
+    let htmlGerado = "";
+    let totalAcumulado = 0;
+
+    carrinho.forEach((item, index) => {
+        totalAcumulado += (item.preco * item.quantidade);
+        htmlGerado += `
+            <div class="cart-item">
+                <img src="${item.imagem}" style="width:50px; border-radius:5px;">
+                <div class="cart-item-info">
+                    <h4>${item.nome}</h4>
+                    <p>Qtd: <strong>${item.quantidade}</strong> - ${(item.preco * item.quantidade).toFixed(2)}€</p>
+                </div>
+                <button onclick="removerItem(${index})" class="btn-remover">&times;</button>
+            </div>`;
+    });
+
+    listaItens.innerHTML = carrinho.length === 0 ? '<p style="text-align:center; padding:20px;">O carrinho está vazio</p>' : htmlGerado;
+    totalElemento.innerText = totalAcumulado.toFixed(2) + "€";
+}   
+
+    function removerItem(index) {
+        carrinho.splice(index, 1);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        renderizarCarrinho();
+        atualizarContador();
+    }
+
+    function atualizarContador() {
+        const total = carrinho.reduce((sum, item) => sum + item.quantidade, 0);
+        document.getElementById('cart-count').innerText = total;
+    }
+
+    function abrirModalCheckout() {
+        if(carrinho.length === 0) return alert("Carrinho vazio!");
+        fecharTudo();
+        document.getElementById('modal-checkout').style.display = 'block';
+        const total = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0);
+        document.getElementById('total-modal').innerText = total.toFixed(2) + "€";
+    }
+function enviarPedidoEmail(event) {
+    event.preventDefault();
+
+    const btn = event.target.querySelector('button');
+    btn.innerText = "A enviar...";
+    btn.disabled = true;
+
+    // GERAR LISTA DE PRODUTOS PARA O EMAIL
+    let resumoTexto = carrinho.map(item => 
+        `${item.quantidade}x ${item.nome} - ${(item.preco * item.quantidade).toFixed(2)}€`
+    ).join("\n");
+
+    const totalFinal = document.getElementById('total-modal').innerText;
+
+    const templateParams = {
+        nome: document.getElementById('nome-cliente').value,
+        email: document.getElementById('email-cliente').value,
+        tel: document.getElementById('tel-cliente').value,
+        resumo: resumoTexto, // Envia a lista real
+        total: totalFinal    // Envia o total real
+    };
+
+    emailjs.send("service_yxgdwtw", "template_rw07z9y", templateParams)
+        .then(function() {
+           alert("Pedido enviado com sucesso!");
+           carrinho = [];
+           localStorage.removeItem('carrinho');
+           atualizarContador();
+           fecharTudo();
+           btn.innerText = "Confirmar e Enviar Pedido";
+           btn.disabled = false;
+        }, function(error) {
+           alert("Erro: " + error.text);
+           btn.innerText = "Confirmar e Enviar Pedido";
+           btn.disabled = false;
+        });
+}
+// Função para abrir o modal e preencher os dados
+function abrirDetalhes(imagem, titulo, descricao, preco) {
+    // 1. Substituir os elementos no modal com as informações recebidas
+    document.getElementById('detalhe-img').src = imagem;
+    document.getElementById('detalhe-titulo').innerText = titulo;
+    document.getElementById('detalhe-descricao').innerText = descricao;
+    document.getElementById('detalhe-preco').innerText = parseFloat(preco).toFixed(2) + '€';
+
+    // 3. Mostrar o modal
+    document.getElementById('modal-detalhes').style.display = 'flex'; // ou 'block' dependendo do teu CSS
+}
+
+// Função para fechar o modal de detalhes
+function fecharDetalhes() {
+    document.getElementById('modal-detalhes').style.display = 'none';
+}
+// Fechar o modal ao clicar fora da caixa branca (no fundo escuro)
+window.addEventListener('click', function(event) {
+    const modalDetalhes = document.getElementById('modal-detalhes');
+    const modalCheckout = document.getElementById('modal-checkout');
+
+    // Verifica se o clique foi no fundo do modal de Detalhes
+    if (event.target === modalDetalhes) {
+        fecharDetalhes();
+    }
+
+    // Já agora, aplicamos a mesma lógica para o modal de Checkout!
+    if (event.target === modalCheckout) {
+        fecharTudo(); // Ou a função que usas para fechar o checkout
+    }
+});
+    window.onload = atualizarContador;
+    </script>
+
+</body>
+
+</html>

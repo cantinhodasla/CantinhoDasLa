@@ -11,6 +11,7 @@
 
 <body class="tema-geral">
 
+    <!--  Cabeçalho  -->
     <header class="header-topo">
         <div class="interface">
             <div class="bloco-logo">
@@ -52,7 +53,7 @@
             </div>
         </div>
     </header>
-
+    <!--  Barra de Menu  -->
     <nav class="barra-categorias">
     <div class="interface">
         <div class="menu-col-esquerda">
@@ -71,6 +72,7 @@
                         <li class="tem-sub-submenu">
                             <a href="#">Casa & Decoração <i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-submenu">
+                                <li><a href="../produtos/azulejos.html">Azulejos</a></li>
                                 <li><a href="../produtos/canecas.html">Canecas</a></li>
                                 <li><a href="../produtos/imanes.html">Ímanes</a></li>
                             </ul>
@@ -127,16 +129,47 @@
         </div>
     </div>
     </nav>
-
-    <section class="banner-categoria" style="background-image: url('../img/mercado/LojaCaixas.webp');">
-        <div class="interface">
-            <div class="banner-texto">
-                <h1>Cantinho das La</h1>
-                <p>Aproveite a diversão com as nossas caixas de mistério!</p>
+    <!--  Banner Rotativo  -->
+    <section class="swiper mySwiper banner-rotativo">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_01.webp');">
+            <div class="interface">
+                <div class="banner-texto">
+                    <h1>Primavera</h1>
+                    <p>Aproveite a primavera!</p>
+                </div>
             </div>
         </div>
+        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_02.webp');">
+            <div class="interface">
+                <div class="banner-texto">
+                    <h1>Dia da Mãe</h1>
+                    <p>Descobre os novos produtos personalizados para ti.</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_03.webp');">
+            <div class="interface">
+                <div class="banner-texto">
+                    <h1>Mundial de Futebol 2026</h1>
+                    <p>Presentes únicos para momentos especiais.</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_04.webp');">
+            <div class="interface">
+                <div class="banner-texto">
+                    <h1>Dia da Criança</h1>
+                    <p>Presentes únicos para momentos especiais.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
     </section>
-
+    <!--  Popup Carrinho  -->
     <div id="side-cart" class="cart-sidebar">
         <div class="cart-header">
             <h3>O Teu Pedido</h3>
@@ -151,10 +184,9 @@
                 </button>
             </div>
     </div>
-
     <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()">
     </div>
-    
+    <!--  Popup Finalizar Compra  --> 
     <div id="modal-checkout" class="modal">
         <div class="modal-content">
         <span class="close-modal" onclick="fecharTudo()">&times;</span>
@@ -188,7 +220,7 @@
         </form>
         </div>
     </div>
-
+    <!--  Rodapé  -->
     <footer class="rodape-principal">
     <div class="interface">
         <div class="footer-conteudo">
@@ -201,6 +233,9 @@
     </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--  Scripts  -->
     <script>
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
@@ -218,7 +253,7 @@
     }
 
     // Adicionar ao Carrinho
-function adicionarAoCarrinho(nome, preco, imagem, inputId) {
+    function adicionarAoCarrinho(nome, preco, imagem, inputId) {
     // 1. Capturar o input de quantidade
     const qtdInput = document.getElementById(inputId);
     
@@ -251,12 +286,11 @@ function adicionarAoCarrinho(nome, preco, imagem, inputId) {
 }
 
     // Desenhar Itens no Carrinho
-function renderizarCarrinho() {
+    function renderizarCarrinho() {
     const listaItens = document.getElementById('cart-items');
     const totalElemento = document.getElementById('cart-total');
     let htmlGerado = "";
     let totalAcumulado = 0;
-
     carrinho.forEach((item, index) => {
         totalAcumulado += (item.preco * item.quantidade);
         htmlGerado += `
@@ -269,10 +303,9 @@ function renderizarCarrinho() {
                 <button onclick="removerItem(${index})" class="btn-remover">&times;</button>
             </div>`;
     });
-
     listaItens.innerHTML = carrinho.length === 0 ? '<p style="text-align:center; padding:20px;">O carrinho está vazio</p>' : htmlGerado;
     totalElemento.innerText = totalAcumulado.toFixed(2) + "€";
-}   
+    }   
 
     function removerItem(index) {
         carrinho.splice(index, 1);
@@ -293,7 +326,8 @@ function renderizarCarrinho() {
         const total = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0);
         document.getElementById('total-modal').innerText = total.toFixed(2) + "€";
     }
-function enviarPedidoEmail(event) {
+
+    function enviarPedidoEmail(event) {
     event.preventDefault();
 
     const btn = event.target.querySelector('button');
@@ -330,8 +364,9 @@ function enviarPedidoEmail(event) {
            btn.disabled = false;
         });
 }
-// Função para abrir o modal e preencher os dados
-function abrirDetalhes(imagem, titulo, descricao, preco) {
+
+    // Função para abrir o modal e preencher os dados
+    function abrirDetalhes(imagem, titulo, descricao, preco) {
     // 1. Substituir os elementos no modal com as informações recebidas
     document.getElementById('detalhe-img').src = imagem;
     document.getElementById('detalhe-titulo').innerText = titulo;
@@ -342,12 +377,13 @@ function abrirDetalhes(imagem, titulo, descricao, preco) {
     document.getElementById('modal-detalhes').style.display = 'flex'; // ou 'block' dependendo do teu CSS
 }
 
-// Função para fechar o modal de detalhes
-function fecharDetalhes() {
+    // Função para fechar o modal de detalhes
+    function fecharDetalhes() {
     document.getElementById('modal-detalhes').style.display = 'none';
 }
-// Fechar o modal ao clicar fora da caixa branca (no fundo escuro)
-window.addEventListener('click', function(event) {
+    
+    // Fechar o modal ao clicar fora da caixa branca (no fundo escuro)
+    window.addEventListener('click', function(event) {
     const modalDetalhes = document.getElementById('modal-detalhes');
     const modalCheckout = document.getElementById('modal-checkout');
 
@@ -361,7 +397,30 @@ window.addEventListener('click', function(event) {
         fecharTudo(); // Ou a função que usas para fechar o checkout
     }
 });
+
+    // Inicializar o Swiper para o banner rotativo
+        const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 5000, // Muda a cada 5 segundos
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        effect: "fade", // Efeito suave de transição (opcional)
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+
     window.onload = atualizarContador;
+
     </script>
 
 </body>
