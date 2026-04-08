@@ -4,14 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercadinho das La | Cantinho das La</title>
+    <title>Contacto | Cantinho das La</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            // Substitua pela sua Public Key copiada no Passo 3
+            emailjs.init("rtVu_EUs8N5XhU6M_");
+        })();
+    </script>
 </head>
 
 <body class="tema-geral">
 
+    <!--  Cabeçalho  -->
     <header class="header-topo">
         <div class="interface">
             <div class="bloco-logo">
@@ -53,14 +61,14 @@
             </div>
         </div>
     </header>
-
-<nav class="barra-categorias">
-    <div class="interface">
-        <div class="menu-col-esquerda">
-            <ul class="menu-lista">
-                <li class="tem-submenu">
-                    <a href="#">Produtos <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="submenu">
+    <!--  Barra de Menu  -->
+    <nav class="barra-categorias">
+        <div class="interface">
+            <div class="menu-col-esquerda">
+                <ul class="menu-lista">
+                    <li class="tem-submenu">
+                        <a href="#">Produtos <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
                         <li class="tem-sub-submenu">
                             <a href="#">Vestuário & Têxtil <i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-submenu">
@@ -72,6 +80,7 @@
                         <li class="tem-sub-submenu">
                             <a href="#">Casa & Decoração <i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-submenu">
+                                <li><a href="../produtos/azulejos.html">Azulejos</a></li>
                                 <li><a href="../produtos/canecas.html">Canecas</a></li>
                                 <li><a href="../produtos/imanes.html">Ímanes</a></li>
                             </ul>
@@ -91,8 +100,8 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
-                <li class="tem-submenu">
+                    </li>
+                    <li class="tem-submenu">
                     <a href="#">Pacotes <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="submenu">
                     <li><a href="#">Dia da Mãe</a></li>
@@ -109,64 +118,180 @@
                     <li><a href="#">Professores</a></li>
                     </ul>
                 </li>
-            </ul>
-        </div>  
+                </ul>
+            </div>
 
-        <div class="menu-col-central">
-            <ul class="menu-lista">
-                <li><a href="../index.html" >Personalizados</a></li>
-                <li><a href="../principal/galeria.html" >Galeria</a></li>
-                <li><a href="../principal/mercadinho.html">Mercadinho</a></li>
-            </ul>
+            <div class="menu-col-central">
+                <ul class="menu-lista">
+                    <li><a href="../index.html">Personalizados</a></li>
+                    <li><a href="../principal/galeria.html">Galeria</a></li>
+                    <li><a href="../principal/mercadinho.html">Mercadinho</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-col-direita">
+                <ul class="menu-lista">
+                    <li><a href="../principal/sobre.html">Sobre</a></li>
+                    <li><a href="../principal/contacto.html" class="ativo">Contactos</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="menu-col-direita">
-            <ul class="menu-lista">
-                <li><a href="../principal/sobre.html">Sobre</a></li>
-                <li><a href="../principal/contacto.html"class="ativo">Contactos</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-    <main>
+    </nav>
+    <!--  Banner  -->
+    <section class="banner-categoria" style="background-image: url('../img/Contactos.webp');">
         <div class="interface">
-            <h2 style="text-align:center; margin-top:40px; color:#FFB6C1;">Bem-vindos ao Mercadinho da La!</h2>
+            <div class="banner-texto">
+                <h1>Fala connosco!</h1>
+                <p>Tens alguma dúvida ou queres um orçamento personalizado? Escolhe o teu canal favorito.</p>
+            </div>
         </div>
-    </main>
-
-    <div class="menu-mobile" id="menu-mobile">
-        <div class="btn-fechar" onclick="fecharTudo()"><i class="fa-solid fa-xmark"></i></div>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="mercadinho.html">Mercadinho</a>
-            <a href="galeria.html">Galeria</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+    </section>
+    <!--  Barra de Caminho  -->
+    <div class="barra-caminho">
+        <div class="interface">
+            <ul>
+                <li><a href="../index.html">Personalizados</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="./contacto.html"><strong>Contactos</strong></a></li>
+            </ul>
+        </div>
     </div>
-    <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()"></div>
+   <!--  Estrutura Principal  -->
+    <main class="pagina-contacto">
+    <div class="interface">
+        <div class="contacto-wrapper">
+            <aside class="contacto-redes">
+                <div class="card-rede instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <p>Instagram</p>
+                        <span>@cantinhodasla</span>
+                    </div>
+                    <a href="https://instagram.com/cantinhodasla" target="_blank">Seguir</a>
+                </div>
 
+                <div class="card-rede facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                    <div>
+                        <p>Facebook</p>
+                        <span>Cantinho das La</span>
+                    </div>
+                    <a href="#" target="_blank">Visitar</a>
+                </div>
+
+                <div class="card-rede whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <p>WhatsApp</p>
+                        <span>910 440 572</span>
+                    </div>
+                    <a href="https://wa.me/351910440572" target="_blank">Mensagem</a>
+                </div>
+                
+                <div class="card-rede email-info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <p>E-mail</p>
+                        <span>geral@cantinhodasla.pt</span>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="contacto-form">
+                <form id="form-contacto-direto" onsubmit="enviarMensagemGeral(event)">
+                    <div class="grupo-input input-select">
+                        <select id="categoria-cont" required>
+                            <option value="" disabled selected hidden></option> 
+                            <option value="Dúvida sobre Produto">Dúvida sobre Produto</option>
+                            <option value="Pedido de Orçamento">Pedido de Orçamento</option>
+                            <option value="Sugestão ou Parceria">Sugestão ou Parceria</option>
+                            <option value="Outros">Outros assuntos</option>
+                        </select>
+                        <label>Seleciona o motivo...</label>
+                        <i class="fa-solid fa-chevron-down seta-select"></i>
+                    </div>
+                    <div class="grupo-input">
+                        <input type="text" id="nome-cont" required placeholder=" ">
+                        <label>Teu Nome</label>
+                    </div>
+                    <div class="grupo-input">
+                        <input type="email" id="email-cont" required placeholder=" ">
+                        <label>Teu E-mail</label>
+                    </div>
+                    <div class="grupo-input">
+                        <textarea id="msg-cont" required placeholder=" " rows="5"></textarea>
+                        <label>Em que te podemos ajudar?</label>
+                    </div>
+                    <button type="submit" class="btn-enviar-cont">Enviar Mensagem</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    </main>
+    <!--  Popup Detalhe Produto  -->
+    <div id="modal-detalhes" class="modal" style="display: none;">
+    <div class="modal-content" style="text-align: center; max-width: 400px;">
+        <span class="close-modal" onclick="fecharDetalhes()">&times;</span>
+        
+        <img id="detalhe-img" src="" alt="Imagem do Produto" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+        <h2 id="detalhe-titulo" style="color: #333; margin-bottom: 10px;"></h2>
+        <p id="detalhe-descricao" style="color: #666; font-size: 0.95rem; margin-bottom: 15px; line-height: 1.5;"></p>
+        <p id="detalhe-preco" style="font-weight: bold; font-size: 1.4rem; color: #D87093; margin-bottom: 20px;"></p>
+    </div>
+    </div>
+    <!--  Popup Carrinho  -->
     <div id="side-cart" class="cart-sidebar">
         <div class="cart-header">
             <h3>O Teu Pedido</h3>
-            <span class="close-cart" onclick="fecharCarrinho()">&times;</span>
+            <span class="close-cart" onclick="fecharTudo()">&times;</span>
         </div>
         <div id="cart-items" class="cart-body">
-            <p style="text-align:center; color:#777; margin-top:20px;">O carrinho está vazio.</p>
-        </div>
-        <div class="cart-footer">
-            <div class="total-area">
-                <span>Total:</span>
-                <span id="cart-total">0.00€</span>
             </div>
-            <button class="btn-whatsapp" onclick="finalizarPedido()">
-                <i class="fa-brands fa-whatsapp"></i> Finalizar no WhatsApp
-            </button>
-        </div>
+        <div class="cart-footer">
+            <div class="total-area">Total: <span id="cart-total">0.00€</span></div>
+                <button class="btn-finalizar" onclick="abrirModalCheckout()">
+                    Finalizar Compra
+                </button>
+            </div>
     </div>
+    <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()">
+    </div>
+    <!--  Popup Finalizar Compra  -->
+    <div id="modal-checkout" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="fecharTudo()">&times;</span>
+        <h2>Finalizar Pedido</h2>
+        <p>Preenche os teus dados para processarmos a encomenda.</p>
+        
+        <form id="form-checkout" onsubmit="enviarPedidoEmail(event)">
+            <div class="campo">
+                <label>Nome Completo*</label>
+                <input type="text" id="nome-cliente" required placeholder="Ex: Maria Silva">
+            </div>
+            <div class="campo">
+                <label>E-mail*</label>
+                <input type="email" id="email-cliente" required placeholder="teu@email.com">
+            </div>
+            <div class="campo">
+                <label>Telemóvel</label>
+                <input type="tel" id="tel-cliente" placeholder="912 345 678">
+            </div>
+            <div class="campo">
+                <label>Morada de Envio (Opcional)</label>
+                <textarea id="morada-cliente" rows="2"></textarea>
+            </div>
+            
+            <div class="resumo-final">
+                <span>Total a pagar: </span>
+                <strong id="total-modal">0.00€</strong>
+            </div>
 
-<footer class="rodape-principal">
+            <button type="submit" class="btn-enviar-final">Confirmar e Enviar Pedido</button>
+        </form>
+    </div>
+    </div>
+    <!--  Rodapé  -->
+    <footer class="rodape-principal">
     <div class="interface">
         <div class="footer-conteudo">
             <p>&copy; 2026 Cantinho das La - Todos os direitos reservados.</p>
@@ -176,44 +301,194 @@
             </div>
         </div>
     </div>
-</footer>
-
+    </footer>
+    <!--  Scripts  -->
     <script>
-        // Funções de Abrir/Fechar
-        const menu = document.getElementById('menu-mobile');
-        const overlay = document.getElementById('overlay-menu');
-        const sideCart = document.getElementById('side-cart');
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-        document.getElementById('btn-menu').addEventListener('click', () => {
-            menu.classList.add('abrir-menu');
-            overlay.classList.add('abrir-menu');
+    // Controlos de Interface
+    function abrirCarrinho() {
+        document.getElementById('side-cart').classList.add('active');
+        document.getElementById('overlay-menu').classList.add('abrir-menu');
+        renderizarCarrinho();
+    }
+
+    function fecharTudo() {
+        document.getElementById('side-cart').classList.remove('active');
+        document.getElementById('overlay-menu').classList.remove('abrir-menu');
+        document.getElementById('modal-checkout').style.display = 'none';
+    }
+
+    // Adicionar ao Carrinho
+function adicionarAoCarrinho(nome, preco, imagem, inputId) {
+    // 1. Capturar o input de quantidade
+    const qtdInput = document.getElementById(inputId);
+    
+    // 2. Converter para número (garantir que é pelo menos 1)
+    const quantidadeAdicional = parseInt(qtdInput.value) || 1;
+
+    // 3. Verificar se o produto já existe no carrinho
+    const index = carrinho.findIndex(item => item.nome === nome);
+
+    if (index !== -1) {
+        // SE JÁ EXISTE: Soma a nova quantidade à que já lá estava
+        carrinho[index].quantidade += quantidadeAdicional;
+    } else {
+        // SE É NOVO: Adiciona com a quantidade selecionada
+        carrinho.push({ 
+            nome: nome, 
+            preco: preco, 
+            imagem: imagem, 
+            quantidade: quantidadeAdicional 
         });
+    }
 
-        function fecharTudo() {
-            menu.classList.remove('abrir-menu');
-            sideCart.classList.remove('active');
-            overlay.classList.remove('abrir-menu');
-        }
+    // 4. Salvar e Atualizar
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    atualizarContador();
+    abrirCarrinho();
+    
+    // 5. Resetar o input do card para 1
+    qtdInput.value = 1;
+}
 
-        function abrirCarrinho() {
-            sideCart.classList.add('active');
-            overlay.classList.add('abrir-menu');
-        }
+    // Desenhar Itens no Carrinho
+function renderizarCarrinho() {
+    const listaItens = document.getElementById('cart-items');
+    const totalElemento = document.getElementById('cart-total');
+    let htmlGerado = "";
+    let totalAcumulado = 0;
 
-        function fecharCarrinho() {
-            sideCart.classList.remove('active');
-            overlay.classList.remove('abrir-menu');
-        }
+    carrinho.forEach((item, index) => {
+        totalAcumulado += (item.preco * item.quantidade);
+        htmlGerado += `
+            <div class="cart-item">
+                <img src="${item.imagem}" style="width:50px; border-radius:5px;">
+                <div class="cart-item-info">
+                    <h4>${item.nome}</h4>
+                    <p>Qtd: <strong>${item.quantidade}</strong> - ${(item.preco * item.quantidade).toFixed(2)}€</p>
+                </div>
+                <button onclick="removerItem(${index})" class="btn-remover">&times;</button>
+            </div>`;
+    });
 
-        // Lógica inicial do carrinho
-        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        
-        function atualizarContador() {
-            document.getElementById('cart-count').innerText = carrinho.length;
-        }
+    listaItens.innerHTML = carrinho.length === 0 ? '<p style="text-align:center; padding:20px;">O carrinho está vazio</p>' : htmlGerado;
+    totalElemento.innerText = totalAcumulado.toFixed(2) + "€";
+}   
 
-        window.onload = atualizarContador;
+    function removerItem(index) {
+        carrinho.splice(index, 1);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        renderizarCarrinho();
+        atualizarContador();
+    }
+
+    function atualizarContador() {
+        const total = carrinho.reduce((sum, item) => sum + item.quantidade, 0);
+        document.getElementById('cart-count').innerText = total;
+    }
+
+    function abrirModalCheckout() {
+        if(carrinho.length === 0) return alert("Carrinho vazio!");
+        fecharTudo();
+        document.getElementById('modal-checkout').style.display = 'block';
+        const total = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0);
+        document.getElementById('total-modal').innerText = total.toFixed(2) + "€";
+    }
+function enviarPedidoEmail(event) {
+    event.preventDefault();
+
+    const btn = event.target.querySelector('button');
+    btn.innerText = "A enviar...";
+    btn.disabled = true;
+
+    // GERAR LISTA DE PRODUTOS PARA O EMAIL
+    let resumoTexto = carrinho.map(item => 
+        `${item.quantidade}x ${item.nome} - ${(item.preco * item.quantidade).toFixed(2)}€`
+    ).join("\n");
+
+    const totalFinal = document.getElementById('total-modal').innerText;
+
+    const templateParams = {
+        nome: document.getElementById('nome-cliente').value,
+        email: document.getElementById('email-cliente').value,
+        tel: document.getElementById('tel-cliente').value,
+        resumo: resumoTexto, // Envia a lista real
+        total: totalFinal    // Envia o total real
+    };
+
+    emailjs.send("service_yxgdwtw", "template_rw07z9y", templateParams)
+        .then(function() {
+           alert("Pedido enviado com sucesso!");
+           carrinho = [];
+           localStorage.removeItem('carrinho');
+           atualizarContador();
+           fecharTudo();
+           btn.innerText = "Confirmar e Enviar Pedido";
+           btn.disabled = false;
+        }, function(error) {
+           alert("Erro: " + error.text);
+           btn.innerText = "Confirmar e Enviar Pedido";
+           btn.disabled = false;
+        });
+}
+// Função para abrir o modal e preencher os dados
+function abrirDetalhes(imagem, titulo, descricao, preco) {
+    // 1. Substituir os elementos no modal com as informações recebidas
+    document.getElementById('detalhe-img').src = imagem;
+    document.getElementById('detalhe-titulo').innerText = titulo;
+    document.getElementById('detalhe-descricao').innerText = descricao;
+    document.getElementById('detalhe-preco').innerText = parseFloat(preco).toFixed(2) + '€';
+
+    // 3. Mostrar o modal
+    document.getElementById('modal-detalhes').style.display = 'flex'; // ou 'block' dependendo do teu CSS
+}
+
+// Função para fechar o modal de detalhes
+function fecharDetalhes() {
+    document.getElementById('modal-detalhes').style.display = 'none';
+}
+// Fechar o modal ao clicar fora da caixa branca (no fundo escuro)
+window.addEventListener('click', function(event) {
+    const modalDetalhes = document.getElementById('modal-detalhes');
+    const modalCheckout = document.getElementById('modal-checkout');
+
+    // Verifica se o clique foi no fundo do modal de Detalhes
+    if (event.target === modalDetalhes) {
+        fecharDetalhes();
+    }
+
+    // Já agora, aplicamos a mesma lógica para o modal de Checkout!
+    if (event.target === modalCheckout) {
+        fecharTudo(); // Ou a função que usas para fechar o checkout
+    }
+});
+    
+function enviarMensagemGeral(event) {
+    event.preventDefault();
+    
+    const categoria = document.getElementById('categoria-cont').value;
+    const nome = document.getElementById('nome-cont').value;
+
+    const params = {
+        nome: nome,
+        email: document.getElementById('email-cont').value,
+        mensagem: document.getElementById('msg-cont').value,
+        // Criamos o assunto que será usado no EmailJS
+        assunto_dinamico: `${categoria} - ${nome}`
+    };
+
+    emailjs.send("service_yxgdwtw", "template_85ngezi", params)
+        .then(() => {
+            alert("Mensagem enviada com sucesso! ✨");
+            event.target.reset();
+        }, (error) => {
+            alert("Erro ao enviar: " + error.text);
+        });
+}
+
+
+window.onload = atualizarContador;
     </script>
 </body>
-
 </html>

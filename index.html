@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercadinho das La | Cantinho das La</title>
+    <title>Cantinho das La</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            // Substitua pela sua Public Key copiada no Passo 3
+            emailjs.init("rtVu_EUs8N5XhU6M_");
+        })();
+    </script>
 </head>
 
 <body class="tema-geral">
@@ -58,58 +67,93 @@
     <div class="interface">
         <div class="menu-col-esquerda">
             <ul class="menu-lista">
-                <li class="tem-submenu">
+                <li class="tem-submenu">    <!--  Produtos  -->
                     <a href="#">Produtos <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="submenu">
-                        <li class="tem-sub-submenu">
+                        <ul class="submenu">
+                            <li class="tem-sub-submenu">
                             <a href="#">Vestuário & Têxtil <i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-submenu">
                                 <li><a href="../produtos/t-shirts.html">T-shirts</a></li>
                                 <li><a href="../produtos/chapeus.html">Chapéus</a></li>
                                 <li><a href="../produtos/sacos.html">Sacos</a></li>
                             </ul>
-                        </li>
-                        <li class="tem-sub-submenu">
+                            </li>
+                            <li class="tem-sub-submenu">
                             <a href="#">Casa & Decoração <i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-submenu">
                                 <li><a href="../produtos/azulejos.html">Azulejos</a></li>
                                 <li><a href="../produtos/canecas.html">Canecas</a></li>
                                 <li><a href="../produtos/imanes.html">Ímanes</a></li>
                             </ul>
-                        </li>
-                        <li class="tem-sub-submenu">
+                            </li>
+                            <li class="tem-sub-submenu">
                             <a href="#">Escritório & Tecnologia <i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-submenu">
                                 <li><a href="../produtos/canetas.html">Canetas</a></li>
                                 <li><a href="../produtos/tapetes-de-rato.html">Tapetes de rato</a></li>
                             </ul>
-                        </li>
-                        <li class="tem-sub-submenu">
+                            </li>
+                            <li class="tem-sub-submenu">
                             <a href="#">Acessórios & Lazer <i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-submenu">
                                 <li><a href="../produtos/porta-chaves.html">Porta-chaves</a></li>
                                 <li><a href="../produtos/puzzles.html">Puzzles</a></li>
                             </ul>
+                            </li>
+                        </ul>
+                </li>
+                <li class="tem-submenu">    <!--  Temas  -->
+                    <a href="#">Temas <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li class="tem-sub-submenu"> <!--  Universo Inclusivo  -->
+                            <a href="#">Universo Inclusivo <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../Temas/Universo_Inclusivo/Mundo_das_Cores.html">Mundo das Cores</a></li>
+                                <li><a href="../Temas/Universo_Inclusivo/Extra_Amor.html">Extra Amor</a></li>
+                                <li><a href="../Temas/Universo_Inclusivo/Super_Sentidos.html">Super Sentidos</a></li>
+                                <li><a href="../Temas/Universo_Inclusivo/Girassóis_Invisíveis.html">Girassóis Invisíveis</a></li>
+                                <li><a href="../Temas/Universo_Inclusivo/Sem_Barreiras.html">Sem Barreiras</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Dias Especiais  -->
+                            <a href="#">Dias Especiais <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../temas/Dias_Especiais/Pascoa/Pascoa.html">Pascoa</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Ocasiões Especiais  -->
+                            <a href="#">Ocasiões Especiais <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Aniversários</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Estações do Ano  -->
+                            <a href="#">Estações do Ano <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Inverno</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Profissões  -->
+                            <a href="#">Profissões <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Advogado</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Signos do Zodíaco  -->
+                            <a href="#">Signos do Zodíaco <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Aquário</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Signos Chineses  -->
+                            <a href="#">Signos Chineses <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Boi</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </li>
-                <li class="tem-submenu">
-                    <a href="#">Pacotes <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="submenu">
-                    <li><a href="#">Dia da Mãe</a></li>
-                    <li><a href="#">Dia do Pai</a></li>
-                    <li><a href="#">Dia dos Avós</a></li>
-                    <li><a href="#">Dia dos Namorados</a></li>
-                    <li><a href="#">Dia da Animal</a></li>
-                    <li><a href="#">Pascoa</a></li>
-                    <li><a href="#">Halloween</a></li>
-                    <li><a href="#">Natal</a></li>
-                    <li><a href="#">Mundial Futebol 2026</a></li>
-                    <li><a href="#">Aniversários</a></li>
-                    <li><a href="#">Casa Nova</a></li>
-                    <li><a href="#">Professores</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Oportunidades</a></li>
             </ul>
         </div>  
 
@@ -125,49 +169,104 @@
             <ul class="menu-lista">
                 <li><a href="../principal/sobre.html">Sobre</a></li>
                 <li><a href="../principal/contacto.html">Contactos</a></li>
+                <li><a href="#">Testemunhos</a></li>
             </ul>
         </div>
     </div>
     </nav>
     <!--  Banner Rotativo  -->
     <section class="swiper mySwiper banner-rotativo">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_01.webp');">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_01.webp');">
             <div class="interface">
                 <div class="banner-texto">
                     <h1>Primavera</h1>
                     <p>Aproveite a primavera!</p>
                 </div>
             </div>
-        </div>
-        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_02.webp');">
+            </div>
+            <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_02.webp');">
             <div class="interface">
                 <div class="banner-texto">
                     <h1>Dia da Mãe</h1>
                     <p>Descobre os novos produtos personalizados para ti.</p>
                 </div>
             </div>
-        </div>
-        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_03.webp');">
+            </div>
+            <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_03.webp');">
             <div class="interface">
                 <div class="banner-texto">
                     <h1>Mundial de Futebol 2026</h1>
                     <p>Presentes únicos para momentos especiais.</p>
                 </div>
             </div>
-        </div>
-        <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_04.webp');">
+            </div>
+            <div class="swiper-slide" style="background-image: url('../img/Banner_Rotativo/Banner_04.webp');">
             <div class="interface">
                 <div class="banner-texto">
                     <h1>Dia da Criança</h1>
                     <p>Presentes únicos para momentos especiais.</p>
                 </div>
             </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+        <!--  Grelha de Produtos Mais Vendidos  -->
+    <section class="mais-vendidos">
+    <div class="interface">
+        <h2 class="titulo-seccao">Os Mais Vendidos ✨</h2>
+        <div class="grelha-mais-vendidos">  
+            <a href="produtos/canecas.html" class="card-mini">          <!--  Produto 01  -->
+                <div class="mini-thumb">
+                    <img src="img/Personalizados/Produtos/Caneca 01.webp" alt="Caneca Especial 01">
+                </div>
+                <div class="mini-info">
+                    <h3>Caneca Especial La</h3>
+                    <p>Desde <strong>8.50€</strong></p>
+                </div>
+            </a>
+            <a href="produtos/CaixasMisterio.html" class="card-mini">   <!--  Produto 02  -->
+                <div class="mini-thumb">
+                    <img src="img/mercado/Box.webp" alt="Caixa Mistério">
+                </div>
+                <div class="mini-info">
+                    <h3>Caixa Mistério Kids</h3>
+                    <p>Desde <strong>15.00€</strong></p>
+                </div>
+            </a>
+            <a href="produtos/mercadinho.html" class="card-mini">       <!--  Produto 03  -->
+                <div class="mini-thumb">
+                    <img src="img/mercado/Produtos/Pulseira 01.png" alt="Pulseira">
+                </div>
+                <div class="mini-info">
+                    <h3>Pulseira de Verão</h3>
+                    <p>Desde <strong>2.50€</strong></p>
+                </div>
+            </a>
+            <a href="produtos/mercadinho.html" class="card-mini">       <!--  Produto 04  -->
+                <div class="mini-thumb">
+                    <img src="img/mercado/Produtos/Peluche 01.png" alt="Peluche">
+                </div>
+                <div class="mini-info">
+                    <h3>Bloco de Notas A5</h3>
+                    <p>Desde <strong>5.00€</strong></p>
+                </div>
+            </a>
+            <a href="produtos/mercadinho.html" class="card-mini">       <!--  Produto 05  -->
+                <div class="mini-thumb">
+                    <img src="img/Personalizados/Produtos/Caneta 01.webp" alt="Caneta">
+                </div>
+                <div class="mini-info">
+                    <h3>Caneta Pom-Pom</h3>
+                    <p>Desde <strong>1.50€</strong></p>
+                </div>
+            </a>
+
         </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
     </section>
     <!--  Popup Carrinho  -->
     <div id="side-cart" class="cart-sidebar">

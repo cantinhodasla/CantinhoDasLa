@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Galeria de Arte | Cantinho das La</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            // Substitua pela sua Public Key copiada no Passo 3
+            emailjs.init("rtVu_EUs8N5XhU6M_");
+        })();
+    </script>
 </head>
 
 <body class="tema-galeria">
@@ -99,18 +106,25 @@
                 <li class="tem-submenu">
                     <a href="#">Temas <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="submenu">
-                    <li><a href="#">Dia da Mãe</a></li>
-                    <li><a href="#">Dia do Pai</a></li>
-                    <li><a href="#">Dia dos Avós</a></li>
-                    <li><a href="#">Dia dos Namorados</a></li>
-                    <li><a href="#">Dia da Animal</a></li>
-                    <li><a href="../Galeria/Pascoa.html">Pascoa</a></li>
-                    <li><a href="#">Halloween</a></li>
-                    <li><a href="#">Natal</a></li>
-                    <li><a href="#">Mundial Futebol 2026</a></li>
-                    <li><a href="#">Aniversários</a></li>
-                    <li><a href="#">Casa Nova</a></li>
-                    <li><a href="#">Professores</a></li>
+                            <li class="tem-sub-submenu">
+                            <a href="#">Páscoa <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../Galeria/Pascoa-Canecas.html">Canecas</a></li>
+                                <li><a href="../Galeria/Pascoa-TShirts.html">T-Shirts</a></li>
+                                <li><a href="../Galeria/Pascoa-Azulejos.html">Azulejos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Dia da Mãe</a></li>
+                        <li><a href="#">Dia do Pai</a></li>
+                        <li><a href="#">Dia dos Avós</a></li>
+                        <li><a href="#">Dia dos Namorados</a></li>
+                        <li><a href="#">Dia da Animal</a></li>
+                        <li><a href="#">Halloween</a></li>
+                        <li><a href="#">Natal</a></li>
+                        <li><a href="#">Mundial Futebol 2026</a></li>
+                        <li><a href="#">Aniversários</a></li>
+                        <li><a href="#">Casa Nova</a></li>
+                        <li><a href="#">Professores</a></li>
                     </ul>
                 </li>
             </ul>
@@ -128,6 +142,7 @@
             <ul class="menu-lista">
                 <li><a href="../principal/sobre.html">Sobre</a></li>
                 <li><a href="../principal/contacto.html">Contactos</a></li>
+                <li><a href="../principal/testemunhos.html">Testemunhos</a></li>
             </ul>
         </div>
     </div>

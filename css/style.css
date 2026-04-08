@@ -1,6 +1,5 @@
-/* ============================================================
-   RESET E BASE
-   ============================================================ */
+/* #region 1. RESET E BASE */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +18,8 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* #endregion */
 
 /* ============================================================
    HEADER (4 BLOCOS: LOGO | PESQUISA | CONTACTO | ACÇÕES)
@@ -201,7 +202,7 @@ body.tema-galeria .produto-card {
 }
 
 /* ============================================================
-   PÁGINA DE CATEGORIA (CANECAS)
+   PÁGINA DE CATEGORIA
    ============================================================ */
 
 /* Banner da Categoria */
@@ -270,6 +271,14 @@ body.tema-galeria .produto-card {
 .seccao-produtos {
     padding: 50px 0;
 }
+.produtos-titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+}
+
 
 .grelha-produtos {
     display: grid;
@@ -848,4 +857,342 @@ body.tema-galeria .footer-links a:hover {
 
 .swiper-pagination-bullet-active {
     background: #fff !important;
+}
+
+/* ============================================================
+   2. PÁGINA DE CONTACTO - ESTRUTURA GERAL
+   ============================================================ */
+.pagina-contacto { 
+    padding: 60px 0; 
+    background: #fdfdfd; 
+}
+
+.contacto-intro { 
+    text-align: center; 
+    margin-bottom: 50px; 
+}
+
+.contacto-intro h1 { 
+    font-size: 2.5rem; 
+    color: #2c3e50; 
+    margin-bottom: 10px;
+}
+
+.contacto-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 40px; 
+    align-items: start;
+}
+
+/* Redes Sociais (Coluna Esquerda) */
+.card-rede {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card-rede i { font-size: 2rem; margin-right: 20px; }
+.card-rede p { font-weight: bold; margin: 0; }
+.card-rede span { color: #777; font-size: 0.9rem; }
+.card-rede a { 
+    margin-left: auto; 
+    padding: 8px 15px; 
+    border-radius: 20px; 
+    text-decoration: none; 
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Cores das Redes */
+.instagram i { color: #E1306C; }
+.instagram a { background: #E1306C; color: #fff; }
+.facebook i { color: #1877F2; }
+.facebook a { background: #1877F2; color: #fff; }
+.whatsapp i { color: #25D366; }
+.whatsapp a { background: #25D366; color: #fff; }
+
+/* ============================================================
+   3. FORMULÁRIO MODERNO (FLOATING LABELS)
+   ============================================================ */
+.contacto-form { 
+    background: #fff; 
+    padding: 40px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+}
+
+.grupo-input { 
+    position: relative; 
+    margin-bottom: 30px; /* Espaço aumentado para não sobrepor labels */
+}
+
+/* Estilo Comum para Inputs e Textarea */
+.grupo-input input, 
+.grupo-input textarea,
+.grupo-input select {
+    width: 100%; 
+    padding: 15px; 
+    border: 2px solid #eee; 
+    border-radius: 8px; 
+    outline: none; 
+    font-size: 1rem;
+    background: #fff;
+    transition: 0.3s;
+    display: block;
+}
+
+.grupo-input textarea { resize: none; }
+
+/* Labels Flutuantes */
+.grupo-input label {
+    position: absolute; 
+    left: 15px; 
+    top: 15px; 
+    color: #999; 
+    transition: 0.3s; 
+    pointer-events: none;
+    background: transparent;
+}
+
+/* Animação: Quando Focado ou Preenchido */
+.grupo-input input:focus ~ label, 
+.grupo-input input:not(:placeholder-shown) ~ label,
+.grupo-input textarea:focus ~ label, 
+.grupo-input textarea:not(:placeholder-shown) ~ label,
+.grupo-input select:focus ~ label,
+.grupo-input select:valid ~ label {
+    top: -12px; 
+    left: 12px; 
+    font-size: 0.85rem; 
+    background: #fff; 
+    padding: 0 8px; 
+    color: #3498db; 
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Destaque no Foco */
+.grupo-input input:focus, 
+.grupo-input textarea:focus,
+.grupo-input select:focus {
+    border-color: #3498db;
+}
+/* ============================================================
+   4. ESTILO ESPECÍFICO DO SELECT (MOTIVO)
+   ============================================================ */
+.input-select {
+    display: flex;
+    align-items: center;
+}
+
+.grupo-input select {
+    appearance: none; /* Remove seta padrão */
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.seta-select {
+    position: absolute;
+    right: 15px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.grupo-input select:focus + label + .seta-select {
+    transform: rotate(180deg);
+    color: #3498db;
+}
+/* ============================================================
+   5. BOTÃO DE ENVIO E RESPONSIVIDADE
+   ============================================================ */
+.btn-enviar-cont {
+    width: 100%; 
+    padding: 18px; 
+    background: #3498db; 
+    color: #fff; 
+    border: none; 
+    border-radius: 10px; 
+    font-weight: bold; 
+    font-size: 1.1rem;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.btn-enviar-cont:hover { 
+    background: #2c3e50; 
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+    .contacto-wrapper { grid-template-columns: 1fr; }
+    .contacto-intro h1 { font-size: 2rem; }
+}
+/* ============================================================
+   SECÇÃO MAIS VENDIDOS (PÁGINA INICIAL)
+   ============================================================ */
+.mais-vendidos {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.titulo-seccao {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Grelha de 5 colunas */
+.grelha-mais-vendidos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Cria 5 colunas iguais */
+    gap: 20px;
+}
+
+/* Ajuste para o link do card */
+.card-mini {
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: block; /* Garante que o link ocupe o espaço todo do card */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-mini:hover {
+    transform: translateY(-8px); /* Sobe um pouco mais no hover para destaque */
+}
+
+/* Imagem do Produto */
+.mini-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Garante que a imagem seja sempre quadrada */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.mini-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem sem a deformar */
+}
+
+/* Garante que o título do produto mantenha a cor correta */
+.mini-info h3 {
+    font-size: 1rem;
+    color: #2c3e50; /* Cor azul escura que usas no site */
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.mini-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.mini-info p strong {
+    color: #3498db; /* Cor de destaque no preço */
+}
+
+/* Responsividade (Ajuste para telemóveis) */
+@media (max-width: 1024px) {
+    .grelha-mais-vendidos {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .grelha-mais-vendidos {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telemóveis */
+    }
+}
+/* ============================================================
+   SECÇÃO PACKS (PÁGINA INICIAL)
+   ============================================================ */
+.packs {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.packs-titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Grelha de 5 colunas */
+.packs-grelha {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas iguais */
+    gap: 20px;
+}
+
+/* Ajuste para o link do card */
+.packs-card {
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: block; /* Garante que o link ocupe o espaço todo do card */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.packs-card:hover {
+    transform: translateY(-8px); /* Sobe um pouco mais no hover para destaque */
+}
+
+/* Imagem do Produto */
+.packs-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Garante que a imagem seja sempre quadrada */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.packs-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem sem a deformar */
+}
+
+/* Garante que o título do produto mantenha a cor correta */
+.packs-info h3 {
+    font-size: 1rem;
+    color: #2c3e50; /* Cor azul escura que usas no site */
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.packs-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.packs-info p strong {
+    color: #3498db; /* Cor de destaque no preço */
+}
+
+/* Responsividade (Ajuste para telemóveis) */
+@media (max-width: 1024px) {
+    .packs-grelha {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .packs-grelha {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telemóveis */
+    }
 }
