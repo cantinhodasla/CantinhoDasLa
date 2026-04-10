@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Dia da Mãe | Cantinho das La</title>
-    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("rtVu_EUs8N5XhU6M_");
+        })();
+    </script>
+
+
+
 </head>
 
 <body class="tema-geral">
@@ -168,7 +177,7 @@
     </div>
     </nav>
     <!--  Banner  -->
-    <section class="banner-categoria" style="background-image: url('../Dias_Especiais/Dia_da_Mâe/Banner_02.webp');">
+    <section class="banner-categoria" style="background-image: url('../Dias_Especiais/Dia_da_Mae/Banner.webp');">
         <div class="interface">
             <div class="banner-texto">
                 <h1>Dia da Mãe </h1>
@@ -192,17 +201,55 @@
             </ul>
         </div>
     </div>
-        <!--  Pacotes Especiais  -->
-    <main class="seccao-produtos">
+    <!--  Como Funciona  -->
+    <section class="como-funciona">
+    <div class="interface">
+        <div class="diviso-titulo-especial">
+             <i class="fa-solid fa-circle-info icone-pacote"></i>
+             <h2 class="titulo-seccao-especial">Como Criar o teu Presente</h2>
+        </div>
+
+        <div class="fluxo-wrapper">
+            <div class="passo">
+                <div class="circulo-num">1</div>
+                <h4>Escolhe o Pacote</h4>
+                <p>Seleciona o conjunto de produtos que pretendes oferecer.</p>
+            </div>
+
+            <i class="fa-solid fa-chevron-right seta-fluxo"></i>
+
+            <div class="passo">
+                <div class="circulo-num">2</div>
+                <h4>Define o Estilo</h4>
+                <p>Escolhe se queres usar uma <strong>Foto Própria</strong>, um <strong>Tema da Galeria</strong>, ou apenas um <strong>Texto simples</strong>.</p>
+            </div>
+
+            <i class="fa-solid fa-chevron-right seta-fluxo"></i>
+
+            <div class="passo">
+                <div class="circulo-num">3</div>
+                <h4>Finaliza o Pedido</h4>
+                <p>Envia o pedido. Se escolheres foto, anexa-a logo no formulário!</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="pacotes-venda">
         <div class="interface">
-            <h2 class="produtos-titulo">💎 Pacotes Especiais 💎</h2>
+            <h2 class="titulo-seccao">Passo 1: Seleciona o teu Pacote</h2>
+        </div>
+    </section>
+    <!--  Pacotes Especiais  -->
+    <main class="   ">
+        <div class="interface">
             <div class="grelha-produtos">
-                <div class="produto-card"> 
+                <div class="produto-card"> <!--  Pacote Essencial  -->
                     <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Pacote 01.webp" alt="Pacote Essencial" 
+                        <img src="../Dias_Especiais/Dia_da_Mae/Pacote 01.webp" alt="Pacote Essencial" 
                             style="cursor: pointer;"
                             onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Pacote 01.webp', 
+                                '../Dias_Especiais/Dia_da_Mae/Pacote 01.webp', 
                                 'Pacote Essencial', 
                                 'Inclui uma caneca personalizada. O presente perfeito para mostrar o seu amor e carinho de forma única e especial.', 
                                  12.50
@@ -213,48 +260,36 @@
                         <div class="produto-preco">
                         <strong>12.50€</strong>
                     </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-DDM-P01">Qtd:</label>
-                        <input type="number" id="qtd-DDM-P01" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pacote Essencial', 12.50, '../Dias_Especiais/Dia_da_Mâe/Pacote 01.webp', 'qtd-DDM-P01')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+                    <button class="btn-adicionar" onclick="abrirConfigurador('Pacote Essencial', '12.50', '../Dias_Especiais/Dia_da_Mae/Pacote 01.webp')">Personalizar</button>
                 </div>
                 </div>
-                <div class="produto-card"> 
+                <div class="produto-card"> <!--  Pacote Especial  -->
                     <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Pacote 02.webp" alt="Pacote Especial" 
+                        <img src="../Dias_Especiais/Dia_da_Mae/Pacote 02.webp" alt="Pacote Especial" 
                             style="cursor: pointer;"
                             onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Pacote 02.webp', 
+                                '../Dias_Especiais/Dia_da_Mae/Pacote 02.webp', 
                                 'Pacote Especial', 
-                                'Inclui uma caneca personalizada e um azulejo decorativo. O presente ideal para expressar o seu amor de forma criativa e memorável.', 
+                                'Inclui uma caneca e uma t-shirt personalizada. O presente ideal para expressar o seu amor de forma criativa e memorável.', 
                                 25.00
                         )">
                     </div>
                     <div class="produto-info">
                         <h3>Pacote Especial</h3>
                         <div class="produto-preco">
-                        <strong>25.00€</strong>
+                            <strong>25.00€</strong>
+                        </div>
+                        <button class="btn-adicionar" onclick="abrirConfigurador('Pacote Especial', '25.00', '../Dias_Especiais/Dia_da_Mae/Pacote 02.webp')">Personalizar</button>
                     </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-DDM-P02">Qtd:</label>
-                        <input type="number" id="qtd-DDM-P02" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pacote Especial', 25.00, '../Dias_Especiais/Dia_da_Mâe/Pacote 02.webp', 'qtd-DDM-P02')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
                 </div>
-                </div>
-                <div class="produto-card"> 
+                <div class="produto-card"> <!--  Pacote Premium  -->
                     <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Pacote 03.webp" alt="Pacote Premium" 
+                        <img src="../Dias_Especiais/Dia_da_Mae/Pacote 03.webp" alt="Pacote Premium" 
                             style="cursor: pointer;"
                             onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Pacote 03.webp', 
+                                '../Dias_Especiais/Dia_da_Mae/Pacote 03.webp', 
                                 'Pacote Premium', 
-                                'Inclui uma caneca personalizada, um azulejo decorativo e um porta-chaves exclusivo. O presente perfeito para demonstrar o seu amor de forma completa e inesquecível.', 
+                                'Inclui uma caneca, uma T-Shirt e uma Azulejo personalizados. O presente perfeito para demonstrar o seu amor de forma completa e inesquecível.', 
                                 30.00
                         )">
                     </div>
@@ -263,260 +298,145 @@
                         <div class="produto-preco">
                         <strong>30.00€</strong>
                     </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-DDM-P03">Qtd:</label>
-                        <input type="number" id="qtd-DDM-P03" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pacote Premium', 30.00, '../Dias_Especiais/Dia_da_Mâe/Pacote 03.webp', 'qtd-DDM-P03')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+                    <button class="btn-adicionar" onclick="abrirConfigurador('Pacote Premium', '30.00', '../Dias_Especiais/Dia_da_Mae/Pacote 03.webp')">Personalizar</button>
                 </div>
                 </div>
-                <div class="produto-card">
+                <div class="produto-card"> <!--  Pacote Personalizado  -->
                     <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Pacote Personalize.webp" alt="Pacote Personalizado" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Pacote Personalize.webp', 
-                                'Pacote Personalizado', 
-                                'Personalize o pacote ao seu gosto! Escolha os itens que mais combinam com a sua mãe e crie um presente único e especial que reflete o amor que sente por ela. Preço sobre orçamento, dependendo dos itens escolhidos.', 
-                                1.00
-                        )">
+                    <img src="../../Temas/Dias_Especiais/Dia_da_Mae/Pacote Personalize.webp" alt="Pacote Personalizado">
                     </div>
                     <div class="produto-info">
                         <h3>Pacote Personalizado</h3>
-                        <div class="produto-preco">
-                        <strong>1.00€</strong>
+                        <p>Criado à tua medida</p>
+                        <a href="../../principal/contacto.html?motivo=orcamento&mensagem=Olá! Gostaria de pedir um orçamento para um Pacote Personalizado para o Dia da Mãe." 
+                            class="btn-adicionar btn-orcamento-estilo">
+                            Pedir Orçamento
+                        </a>
                     </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-DDM-P04">Qtd:</label>
-                        <input type="number" id="qtd-DDM-P04" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pacote Personalizado', 1.00, '../Dias_Especiais/Dia_da_Mâe/Pacote Personalize.webp', 'qtd-DDM-P04')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
-                </div>
                 </div>
             </div>
         </div>
     </main>
-    <!--  Canecas  -->
-    <main class="seccao-produtos">
-        <div class="interface">
-            <h2 class="produtos-titulo">⭐ Canecas ⭐</h2>
-            <div class="grelha-produtos">
-                <div class="produto-card"> 
-                    <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Caneca M01.webp" alt="Caneca M01" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Caneca M01.webp', 
-                                'Caneca M01', 
-                                'Personalização 01', 
-                                 1.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Caneca M01</h3>
-                        <div class="produto-preco">
-                        <strong>1.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-Caneca-M01-01">Qtd:</label>
-                        <input type="number" id="qtd-Caneca-M01-01" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caneca M01', 1.00, '../Dias_Especiais/Dia_da_Mâe/Caneca M01.webp', 'qtd-Caneca-M01-01')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+    <!--  Exemplos de Personalização  -->
+    <section class="exemplos-personalizacao">
+    <div class="interface">
+        <h2 class="titulo-galeria">Inspirações para a tua Caneca</h2>
+        <div class="grelha-exemplos">
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M01.webp" alt="Exemplo Caneca 1">
                 </div>
+                <h3>M01</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M02.webp" alt="Exemplo Caneca 2">
                 </div>
-                <div class="produto-card"> 
-                    <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Caneca M02.webp" alt="Caneca M02" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Caneca M02.webp', 
-                                'Caneca M02', 
-                                'Personalização 02', 
-                                2.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Caneca M02</h3>
-                        <div class="produto-preco">
-                        <strong>2.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-Caneca-M02-02">Qtd:</label>
-                        <input type="number" id="qtd-Caneca-M02-02" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caneca M02', 2.00, '../Dias_Especiais/Dia_da_Mâe/Caneca M02.webp', 'qtd-Caneca-M02-02')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+                <h3>M02</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M03.webp" alt="Exemplo Caneca 3">
                 </div>
+                <h3>M03</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M04.webp" alt="Exemplo Caneca 4">
                 </div>
-                <div class="produto-card"> 
-                    <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Caneca M03.webp" alt="Caneca M03" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Caneca M03.webp', 
-                                'Caneca M03', 
-                                'Personalização 03', 
-                                5.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Caneca M03</h3>
-                        <div class="produto-preco">
-                        <strong>5.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-Caneca-M03-03">Qtd:</label>
-                        <input type="number" id="qtd-Caneca-M03-03" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caneca M03', 5.00, '../Dias_Especiais/Dia_da_Mâe/Caneca M03.webp', 'qtd-Caneca-M03-03')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+                <h3>M04</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M05.webp" alt="Exemplo Caneca 5">
                 </div>
-                </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="../Dias_Especiais/Dia_da_Mâe/Caneca M04.webp" alt="Caneca M04" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../Dias_Especiais/Dia_da_Mâe/Caneca M04.webp', 
-                                'Caneca M04', 
-                                'Personalização 04', 
-                                10.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Caneca M04</h3>
-                        <div class="produto-preco">
-                        <strong>10.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-Caneca-M04-04">Qtd:</label>
-                        <input type="number" id="qtd-Caneca-M04-04" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Caneca M04', 10.00, '../Dias_Especiais/Dia_da_Mâe/Caneca M04.webp', 'qtd-Caneca-M04-04')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
-                </div>
-                </div>
+                <h3>M05</h3>
             </div>
         </div>
-    </main>
-        <!--  T-Shirts  -->
-    <main class="seccao-produtos">
-        <div class="interface">
-            <h2 class="produtos-titulo">T-Shirts ✨</h2>
-            <div class="grelha-produtos">
-                <div class="produto-card"> 
-                    <div class="produto-imagem">
-                        <img src="../img/galeria/Pascoa/PS01.webp" alt="PS01" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../img/galeria/Pascoa/PS01.webp', 
-                                'PS01', 
-                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
-                                1.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>PS01</h3>
-                        <div class="produto-preco">
-                        <strong>1.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-PS-01">Qtd:</label>
-                        <input type="number" id="qtd-PS-01" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS01', 1.00, '../img/galeria/Pascoa/PS01.webp', 'qtd-PS-01')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+        <div class="ver-todos-container">
+            <a href="../Dias_Especiais/Dia_da_Mae_Canecas.html" class="btn-ver-todos">Ver Todos os Temas de Canecas</a>
+        </div>
+
+        <hr class="divisor-galeria">
+
+        <h2 class="titulo-galeria">Inspirações para T-Shirts</h2>
+        <div class="grelha-exemplos">
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M01.webp" alt="Exemplo Caneca 1">
                 </div>
+                <h3>M01</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M02.webp" alt="Exemplo Caneca 2">
                 </div>
-                <div class="produto-card"> 
-                    <div class="produto-imagem">
-                        <img src="../img/galeria/Pascoa/PS02.webp" alt="PS02" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../img/galeria/Pascoa/PS02.webp', 
-                                'PS02', 
-                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
-                                2.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>PS02</h3>
-                        <div class="produto-preco">
-                        <strong>2.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-PS-02">Qtd:</label>
-                        <input type="number" id="qtd-PS-02" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS02', 2.00, '../img/galeria/Pascoa/PS02.webp', 'qtd-PS-02')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+                <h3>M02</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M03.webp" alt="Exemplo Caneca 3">
                 </div>
+                <h3>M03</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M04.webp" alt="Exemplo Caneca 4">
                 </div>
-                <div class="produto-card"> 
-                    <div class="produto-imagem">
-                        <img src="../img/galeria/Pascoa/PS05.webp" alt="PS05" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../img/galeria/Pascoa/PS05.webp', 
-                                'PS05', 
-                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
-                                5.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>PS05</h3>
-                        <div class="produto-preco">
-                        <strong>5.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-PS-05">Qtd:</label>
-                        <input type="number" id="qtd-PS-05" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS05', 5.00, '../img/galeria/Pascoa/PS05.webp', 'qtd-PS-05')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
+                <h3>M04</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M05.webp" alt="Exemplo Caneca 5">
                 </div>
-                </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="../img/galeria/Pascoa/PS13.webp" alt="PS13" 
-                            style="cursor: pointer;"
-                            onclick="abrirDetalhes(
-                                '../img/galeria/Pascoa/PS13.webp', 
-                                'PS13', 
-                                'Esta caixa incrível inclui 1 a 2 itens misteriosos cuidadosamente selecionados. Ideal para oferecer a amigos ou familiares!', 
-                                10.00
-                        )">
-                    </div>
-                    <div class="produto-info">
-                        <h3>PS13</h3>
-                        <div class="produto-preco">
-                        <strong>10.00€</strong>
-                    </div>
-                    <div class="seletor-quantidade">
-                        <label for="qtd-PS-13">Qtd:</label>
-                        <input type="number" id="qtd-PS-13" value="1" min="1">
-                    </div>
-                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('PS13', 10.00, '../img/galeria/Pascoa/PS13.webp', 'qtd-PS-13')">
-                        <i class="fa-solid fa-cart-plus"></i> Adicionar
-                    </button>
-                </div>
-                </div>
+                <h3>M05</h3>
             </div>
         </div>
-    </main>
-    <!--  Popup Detalhe Produto  -->
+        <div class="ver-todos-container">
+            <a href="temas-tshirts.html" class="btn-ver-todos">Ver Todos os Temas de T-Shirts</a>
+        </div>
+
+        <hr class="divisor-galeria">
+
+        <h2 class="titulo-galeria">Inspirações para Azulejos</h2>
+        <div class="grelha-exemplos">
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M01.webp" alt="Exemplo Caneca 1">
+                </div>
+                <h3>M01</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M02.webp" alt="Exemplo Caneca 2">
+                </div>
+                <h3>M02</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M03.webp" alt="Exemplo Caneca 3">
+                </div>
+                <h3>M03</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M04.webp" alt="Exemplo Caneca 4">
+                </div>
+                <h3>M04</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M05.webp" alt="Exemplo Caneca 5">
+                </div>
+                <h3>M05</h3>
+            </div>
+        </div>
+        <div class="ver-todos-container">
+            <a href="temas-azulejos.html" class="btn-ver-todos">Ver Todos os Temas de Azulejos</a>
+        </div>
+    </div>
+    </section>
+    <!--  Modal Detalhe Produto  -->
     <div id="modal-detalhes" class="modal" style="display: none;">
     <div class="modal-content" style="text-align: center; max-width: 400px;">
         <span class="close-modal" onclick="fecharDetalhes()">&times;</span>
@@ -526,6 +446,64 @@
         <p id="detalhe-descricao" style="color: #666; font-size: 0.95rem; margin-bottom: 15px; line-height: 1.5;"></p>
         <p id="detalhe-preco" style="font-weight: bold; font-size: 1.4rem; color: #D87093; margin-bottom: 20px;"></p>
     </div>
+    </div>
+    <!--  Modal Configurador  -->
+    <div id="modal-configurador" class="modal">
+    <div class="modal-content" style="position: relative;">
+        <span class="fechar-modal" onclick="fecharConfigurador()">&times;</span>
+        
+        <h3>Personaliza o teu <span id="nome-prod-config"></span></h3>
+        
+        <div class="personalizacao-unificada">
+            <div class="grupo-input">
+                <input type="text" id="titulo-pers" placeholder=" " oninput="validarEscolhaUnica('texto')">
+                <label>Título (Ex: "Para a Melhor Mãe")</label>
+            </div>
+            <div class="grupo-input">
+                <textarea id="corpo-pers" rows="2" placeholder=" " oninput="validarEscolhaUnica('texto')"></textarea>
+                <label>Mensagem / Corpo do Texto</label>
+            </div>
+
+            <p style="text-align:center; margin: 15px 0; color: #ccc; font-size: 0.8rem;">— OU —</p>
+
+            <div class="grupo-input">
+                <input type="text" id="ref-galeria" placeholder=" " oninput="validarEscolhaUnica('ref')">
+                <label>Referência do Tema (da Galeria)</label>
+            </div>
+
+            <p style="text-align:center; margin: 15px 0; color: #ccc; font-size: 0.8rem;">— OU —</p>
+
+            <div class="campo-upload-simples">
+                <label for="foto-cliente" class="label-upload">
+                    <i class="fa-solid fa-paperclip"></i> Anexar Foto Própria
+                </label>
+                <input type="file" id="foto-cliente" accept="image/*" onchange="mostrarNomeArquivo(); validarEscolhaUnica('foto')">
+                <small id="status-arquivo" style="display:block; color:#3498db; margin-top:5px; font-weight:bold;"></small>
+                <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">
+                    * Nota: Após enviar o pedido, entraremos em contacto para solicitar o envio da imagem original em alta qualidade.
+                </p>
+            </div>
+        </div>
+
+        <button class="btn-adicionar" onclick="confirmarConfiguracao()">Adicionar ao Carrinho</button>
+    </div>
+    </div>
+    <!--  Modal Detalhe Carrinho  -->    
+    <div id="modal-item-carrinho" class="modal" style="display:none;">
+        <div class="modal-content" style="max-width: 500px;">
+            <span class="fechar-modal" onclick="fecharModalItem()">&times;</span>
+            <h2 id="det-nome" style="color: #D87093; margin-bottom: 15px;"></h2>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+                <img id="det-img" src="" style="width: 150px; border-radius: 10px; border: 1px solid #eee;">
+                <div style="flex: 1;">
+                    <p><strong>Preço:</strong> <span id="det-preco"></span>€</p>
+                    <hr style="margin: 10px 0; opacity: 0.2;">
+                    <p><strong>Personalização:</strong></p>
+                    <div id="det-personalizacao" style="background: #f9f9f9; padding: 10px; border-radius: 5px; margin-top: 5px; font-size: 0.9em;">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--  Popup Carrinho  -->
     <div id="side-cart" class="cart-sidebar">
@@ -546,37 +524,36 @@
     </div>
     <!--  Popup Finalizar Compra  -->
     <div id="modal-checkout" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="fecharTudo()">&times;</span>
-        <h2>Finalizar Pedido</h2>
-        <p>Preenche os teus dados para processarmos a encomenda.</p>
-        
-        <form id="form-checkout" onsubmit="enviarPedidoEmail(event)">
-            <div class="campo">
-                <label>Nome Completo*</label>
-                <input type="text" id="nome-cliente" required placeholder="Ex: Maria Silva">
-            </div>
-            <div class="campo">
-                <label>E-mail*</label>
-                <input type="email" id="email-cliente" required placeholder="teu@email.com">
-            </div>
-            <div class="campo">
-                <label>Telemóvel</label>
-                <input type="tel" id="tel-cliente" placeholder="912 345 678">
-            </div>
-            <div class="campo">
-                <label>Morada de Envio (Opcional)</label>
-                <textarea id="morada-cliente" rows="2"></textarea>
-            </div>
-            
-            <div class="resumo-final">
-                <span>Total a pagar: </span>
-                <strong id="total-modal">0.00€</strong>
-            </div>
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharTudo()">&times;</span>
+            <h2>Finalizar Pedido</h2>
+            <p style="margin-bottom: 30px; color: #666; font-size: 0.95rem;">
+                Preenche os teus dados para processarmos a encomenda.
+            </p>
+            <form id="form-checkout" onsubmit="enviarPedido(event)">
+                <div class="grupo-input">
+                    <input type="text" id="nome-check" placeholder=" " required>
+                    <label>Nome Completo</label>
+                </div>
+                <div class="grupo-input">
+                    <input type="email" id="email-check" placeholder=" " required>
+                    <label>Email</label>
+                </div>
+                <div class="grupo-input">
+                    <div class="grupo-input">
+                        <input type="tel" id="tel-check" placeholder=" ">
+                        <label>Telemóvel (Opcional)</label>
+                        <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">
+                            * Nota: Caso não forneça o telemóvel, só poderemos entrar em contacto apartir do email fornecido.
+                        </p>
+                    </div>
+                </div>
+                <input type="hidden" id="detalhes-pedido-final" name="message">
+                <p style="margin: 15px 0; font-size: 0.9rem; color: #555;">Total a Pagar: <strong id="total-modal">0.00€</strong></p>
 
-            <button type="submit" class="btn-enviar-final">Confirmar e Enviar Pedido</button>
-        </form>
-    </div>
+                <button type="submit" class="btn-finalizar">Enviar Pedido</button>  
+            </form>
+        </div>
     </div>
     <!--  Rodapé  -->
     <footer class="rodape-principal">
@@ -590,24 +567,31 @@
         </div>
     </div>
     </footer>
-    <!--  Scripts  -->
-    <script>
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    // Controlos de Interface
-    function abrirCarrinho() {
+<!-- *************** Scripts *************** -->
+<script>
+
+/* 1. VARIÁVEIS GLOBAIS (O topo de tudo) */
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+let produtoSendoConfigurado = {};
+let tempProduto = { nome: "", preco: "" };
+
+ /* 2. FUNÇÕES DE ACÇÃO (Configurador, Checkout, Envio) */
+
+// Controlos de Interface
+function abrirCarrinho() {
         document.getElementById('side-cart').classList.add('active');
         document.getElementById('overlay-menu').classList.add('abrir-menu');
         renderizarCarrinho();
     }
 
-    function fecharTudo() {
+function fecharTudo() {
         document.getElementById('side-cart').classList.remove('active');
         document.getElementById('overlay-menu').classList.remove('abrir-menu');
         document.getElementById('modal-checkout').style.display = 'none';
     }
 
-    // Adicionar ao Carrinho
+// Adicionar ao Carrinho
 function adicionarAoCarrinho(nome, preco, imagem, inputId) {
     // 1. Capturar o input de quantidade
     const qtdInput = document.getElementById(inputId);
@@ -640,86 +624,111 @@ function adicionarAoCarrinho(nome, preco, imagem, inputId) {
     qtdInput.value = 1;
 }
 
-    // Desenhar Itens no Carrinho
+// Desenhar Itens no Carrinho
 function renderizarCarrinho() {
-    const listaItens = document.getElementById('cart-items');
-    const totalElemento = document.getElementById('cart-total');
-    let htmlGerado = "";
-    let totalAcumulado = 0;
+    // IDs corrigidos para coincidir com o teu HTML
+    const listaCarrinho = document.getElementById('cart-items'); 
+    const totalCarrinho = document.getElementById('cart-total');
+    
+    if (!listaCarrinho) return; 
+
+    listaCarrinho.innerHTML = '';
+    let total = 0;
+
+    if (carrinho.length === 0) {
+        listaCarrinho.innerHTML = '<p style="text-align:center; padding: 20px;">O seu carrinho está vazio.</p>';
+        totalCarrinho.innerText = '0.00€';
+        return;
+    }
 
     carrinho.forEach((item, index) => {
-        totalAcumulado += (item.preco * item.quantidade);
-        htmlGerado += `
-            <div class="cart-item">
-                <img src="${item.imagem}" style="width:50px; border-radius:5px;">
-                <div class="cart-item-info">
-                    <h4>${item.nome}</h4>
-                    <p>Qtd: <strong>${item.quantidade}</strong> - ${(item.preco * item.quantidade).toFixed(2)}€</p>
-                </div>
-                <button onclick="removerItem(${index})" class="btn-remover">&times;</button>
-            </div>`;
+        total += item.preco * (item.quantidade || 1);
+
+        const divItem = document.createElement('div');
+        divItem.className = 'item-carrinho';
+        
+        divItem.innerHTML = `
+            <img src="${item.imagem}" alt="${item.nome}" 
+                 onclick="verDetalhesNoCarrinho(${index})" 
+                 style="cursor: pointer; width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+            
+            <div class="item-info" style="flex: 1; margin-left: 10px;">
+                <h4 onclick="verDetalhesNoCarrinho(${index})" 
+                    style="cursor: pointer; color: #D87093; margin: 0; font-size: 0.9em;">
+                    ${item.nome}
+                </h4>
+                <p style="margin: 5px 0; font-size: 0.85em;">
+                    ${item.preco.toFixed(2)}€ x ${item.quantidade || 1}
+                </p>
+            </div>
+
+            <button onclick="removerItem(${index})" 
+                    style="background: none; border: none; color: #ff4d4d; cursor: pointer;">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        `;
+        
+        listaCarrinho.appendChild(divItem);
     });
 
-    listaItens.innerHTML = carrinho.length === 0 ? '<p style="text-align:center; padding:20px;">O carrinho está vazio</p>' : htmlGerado;
-    totalElemento.innerText = totalAcumulado.toFixed(2) + "€";
-}   
+    totalCarrinho.innerText = total.toFixed(2) + "€";
+}
 
-    function removerItem(index) {
+function removerItem(index) {
         carrinho.splice(index, 1);
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
         renderizarCarrinho();
         atualizarContador();
-    }
+}
 
-    function atualizarContador() {
+function atualizarContador() {
         const total = carrinho.reduce((sum, item) => sum + item.quantidade, 0);
         document.getElementById('cart-count').innerText = total;
     }
 
-    function abrirModalCheckout() {
+function abrirModalCheckout() {
         if(carrinho.length === 0) return alert("Carrinho vazio!");
         fecharTudo();
         document.getElementById('modal-checkout').style.display = 'block';
         const total = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0);
         document.getElementById('total-modal').innerText = total.toFixed(2) + "€";
     }
-function enviarPedidoEmail(event) {
-    event.preventDefault();
+
+function enviarPedido(event) {
+    event.preventDefault(); // Impede a página de recarregar
 
     const btn = event.target.querySelector('button');
     btn.innerText = "A enviar...";
     btn.disabled = true;
 
-    // GERAR LISTA DE PRODUTOS PARA O EMAIL
-    let resumoTexto = carrinho.map(item => 
-        `${item.quantidade}x ${item.nome} - ${(item.preco * item.quantidade).toFixed(2)}€`
-    ).join("\n");
+    // 1. Prepara o resumo dos produtos para a variável {{message}} do EmailJS
+    const resumoFinal = gerarResumoPedido(); 
 
-    const totalFinal = document.getElementById('total-modal').innerText;
-
+    // 2. Parâmetros para o EmailJS
     const templateParams = {
-        nome: document.getElementById('nome-cliente').value,
-        email: document.getElementById('email-cliente').value,
-        tel: document.getElementById('tel-cliente').value,
-        resumo: resumoTexto, // Envia a lista real
-        total: totalFinal    // Envia o total real
+        from_name: document.getElementById('nome-check').value,
+        user_email: document.getElementById('email-check').value,
+        user_phone: document.getElementById('tel-check').value || "Não fornecido",
+        message: resumoFinal // Aqui vai a lista de artigos + personalizações
     };
 
+    // 3. Envio Real (Verifica se o teu Service e Template ID estão corretos)
     emailjs.send("service_yxgdwtw", "template_rw07z9y", templateParams)
         .then(function() {
-           alert("Pedido enviado com sucesso!");
-           carrinho = [];
-           localStorage.removeItem('carrinho');
-           atualizarContador();
-           fecharTudo();
-           btn.innerText = "Confirmar e Enviar Pedido";
-           btn.disabled = false;
+            alert('Encomenda enviada com sucesso! Entraremos em contacto.');
+            carrinho = []; // Limpa o carrinho
+            renderizarCarrinho();
+            document.querySelector('#modal-checkout form').reset();
+            fecharTudo();
         }, function(error) {
-           alert("Erro: " + error.text);
-           btn.innerText = "Confirmar e Enviar Pedido";
-           btn.disabled = false;
+            alert('Erro ao enviar: ' + JSON.stringify(error));
+        })
+        .finally(() => {
+            btn.innerText = "Enviar Pedido";
+            btn.disabled = false;
         });
 }
+
 // Função para abrir o modal e preencher os dados
 function abrirDetalhes(imagem, titulo, descricao, preco) {
     // 1. Substituir os elementos no modal com as informações recebidas
@@ -736,6 +745,107 @@ function abrirDetalhes(imagem, titulo, descricao, preco) {
 function fecharDetalhes() {
     document.getElementById('modal-detalhes').style.display = 'none';
 }
+
+
+function mostrarNomeArquivo() {
+    const input = document.getElementById('foto-cliente');
+    const status = document.getElementById('status-arquivo');
+    status.innerText = input.files[0] ? "📷 Foto: " + input.files[0].name : "";
+}
+
+
+
+// 1. Quando clica no botão "Adicionar" do card
+function abrirConfigurador(nome, preco, imagem) {
+    tempProduto.nome = nome;
+    tempProduto.preco = preco;
+    tempProduto.imagem = imagem;
+
+    // Limpa campos anteriores
+    document.getElementById('titulo-pers').value = '';
+    document.getElementById('corpo-pers').value = '';
+    document.getElementById('ref-galeria').value = '';
+    document.getElementById('foto-cliente').value = '';
+    document.getElementById('status-arquivo').innerText = '';
+
+    document.getElementById('nome-prod-config').innerText = nome;
+    document.getElementById('modal-configurador').style.display = 'flex';
+}
+
+// 2. Quando clica em "Confirmar e Adicionar" no modal
+function confirmarConfiguracao() {
+    const t = document.getElementById('titulo-pers').value;
+    const c = document.getElementById('corpo-pers').value;
+    const r = document.getElementById('ref-galeria').value;
+    const f = document.getElementById('foto-cliente').files[0];
+
+    if (!t && !r && !f) {
+        alert("Por favor, preencha o texto, a referência ou anexe uma foto.");
+        return;
+    }
+
+    // Criamos um objeto organizado
+    const novoItem = {
+        nome: tempProduto.nome,
+        preco: parseFloat(tempProduto.preco),
+        imagem: tempProduto.imagem,
+        quantidade: 1, // <--- Adiciona esta linha
+        detalhes: {
+            titulo: t || null,
+            corpo: c || null,
+            referencia: r || null,
+            foto: f ? f.name : null
+        }
+    };
+
+    carrinho.push(novoItem);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    
+    atualizarContador();
+    fecharConfigurador();
+    abrirCarrinho(); // Mostra logo o carrinho
+}
+
+function fecharConfigurador() {
+    document.getElementById('modal-configurador').style.display = 'none';
+}
+
+// Função para garantir escolha única: limpa os outros campos ao escrever num
+function validarEscolhaUnica(campoActivo) {
+    const titulo = document.getElementById('titulo-pers');
+    const corpo = document.getElementById('corpo-pers');
+    const ref = document.getElementById('ref-galeria');
+    const foto = document.getElementById('foto-cliente');
+    const statusFoto = document.getElementById('status-arquivo');
+
+    if (campoActivo === 'texto') {
+        ref.value = '';
+        foto.value = '';
+        statusFoto.innerText = '';
+    } else if (campoActivo === 'ref') {
+        titulo.value = '';
+        corpo.value = '';
+        foto.value = '';
+        statusFoto.innerText = '';
+    } else if (campoActivo === 'foto') {
+        titulo.value = '';
+        corpo.value = '';
+        ref.value = '';
+    }
+}
+
+function abrirCheckout(nome, preco) {
+    document.getElementById('nome-prod-check').value = nome;
+    document.getElementById('preco-check').value = preco;
+    document.getElementById('modal-checkout').style.display = 'flex';
+}
+
+function fecharConfigurador() {
+    document.getElementById('modal-configurador').style.display = 'none';
+}
+
+/* 3. EVENTOS DE JANELA (Window Events - Todos juntos no fim) */
+
 // Fechar o modal ao clicar fora da caixa branca (no fundo escuro)
 window.addEventListener('click', function(event) {
     const modalDetalhes = document.getElementById('modal-detalhes');
@@ -751,9 +861,56 @@ window.addEventListener('click', function(event) {
         fecharTudo(); // Ou a função que usas para fechar o checkout
     }
 });
-    window.onload = atualizarContador;
-    </script>
 
+function verDetalhesNoCarrinho(index) {
+    const item = carrinho[index];
+    
+    document.getElementById('det-nome').innerText = item.nome;
+    document.getElementById('det-img').src = item.imagem;
+    document.getElementById('det-preco').innerText = item.preco.toFixed(2);
+    
+    const divPers = document.getElementById('det-personalizacao');
+    divPers.innerHTML = ""; // Limpa anterior
+
+    if (item.detalhes.titulo) divPers.innerHTML += `<p><strong>Título:</strong> ${item.detalhes.titulo}</p>`;
+    if (item.detalhes.corpo) divPers.innerHTML += `<p><strong>Corpo:</strong> ${item.detalhes.corpo}</p>`;
+    if (item.detalhes.referencia) divPers.innerHTML += `<p><strong>Ref. Galeria:</strong> ${item.detalhes.referencia}</p>`;
+    if (item.detalhes.foto) divPers.innerHTML += `<p><i class="fa-solid fa-image"></i> Foto: ${item.detalhes.foto}</p>`;
+    
+    if (divPers.innerHTML === "") divPers.innerHTML = "Sem personalização.";
+
+    document.getElementById('modal-item-carrinho').style.display = 'flex';
+}
+
+function fecharModalItem() {
+    document.getElementById('modal-item-carrinho').style.display = 'none';
+}
+function gerarResumoPedido() {
+    let resumo = "--- DETALHES DA ENCOMENDA ---\n\n";
+    
+    carrinho.forEach((item, index) => {
+        resumo += `ITEM ${index + 1}: ${item.nome}\n`;
+        resumo += `Preço: ${item.preco.toFixed(2)}€\n`;
+        
+        const p = item.detalhes;
+        if (p.titulo || p.corpo || p.referencia || p.foto) {
+            resumo += `Personalização:\n`;
+            if (p.titulo) resumo += `   - Título: ${p.titulo}\n`;
+            if (p.corpo)  resumo += `   - Mensagem: ${p.corpo}\n`;
+            if (p.referencia) resumo += `   - Ref. Galeria: ${p.referencia}\n`;
+            if (p.foto)   resumo += `   - Ficheiro: ${p.foto}\n`;
+        }
+        resumo += `\n`;
+    });
+
+    const total = carrinho.reduce((sum, i) => sum + i.preco, 0);
+    resumo += `TOTAL A PAGAR: ${total.toFixed(2)}€`;
+    
+    return resumo;
+}
+
+window.onload = atualizarContador;
+    
+</script>
 </body>
-
 </html>

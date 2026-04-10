@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dia da Mãe - Canecas| Cantinho das La</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("rtVu_EUs8N5XhU6M_");
+        })();
+    </script>
+
+
+
+</head>
+
+<body class="tema-geral">
+
+    <!--  Cabeçalho  -->
+    <header class="header-topo">
+        <div class="interface">
+            <div class="bloco-logo">
+                <a href="../../index.html">
+                    <img src="../../../img/Logotipo.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="bloco-central">
+                <div class="barra-pesquisa">
+                    <form action="/pesquisar" method="GET">
+                        <input type="text" name="q" placeholder="O que procuras?">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contacto-topo">
+                <span><i class="fa-solid fa-phone"></i> 910 440 572</span>
+            </div>
+
+            <div class="bloco-direita">
+                <div class="header-acoes">
+                    <div class="redes-sociais">
+                        <a href="https://www.instagram.com/cantinhodasla/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/cantinhodasla/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="cart-icon" onclick="abrirCarrinho()">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!--  Barra de Menu  -->
+    <nav class="barra-categorias">
+    <div class="interface">
+        <div class="menu-col-esquerda">
+            <ul class="menu-lista">
+                <li class="tem-submenu">    <!--  Produtos  -->
+                    <a href="#">Produtos <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li class="tem-sub-submenu">
+                            <a href="#">Vestuário & Têxtil <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../../produtos/t-shirts.html">T-shirts</a></li>
+                                <li><a href="../../produtos/chapeus.html">Chapéus</a></li>
+                                <li><a href="../../produtos/sacos.html">Sacos</a></li>
+                            </ul>
+                            </li>
+                            <li class="tem-sub-submenu">
+                            <a href="#">Casa & Decoração <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../../produtos/azulejos.html">Azulejos</a></li>
+                                <li><a href="../../produtos/canecas.html">Canecas</a></li>
+                                <li><a href="../../produtos/imanes.html">Ímanes</a></li>
+                            </ul>
+                            </li>
+                            <li class="tem-sub-submenu">
+                            <a href="#">Escritório & Tecnologia <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../../produtos/canetas.html">Canetas</a></li>
+                                <li><a href="../../produtos/tapetes-de-rato.html">Tapetes de rato</a></li>
+                            </ul>
+                            </li>
+                            <li class="tem-sub-submenu">
+                            <a href="#">Acessórios & Lazer <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../../produtos/porta-chaves.html">Porta-chaves</a></li>
+                                <li><a href="../../produtos/puzzles.html">Puzzles</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                </li>
+                <li class="tem-submenu">    <!--  Temas  -->
+                    <a href="#">Temas <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li class="tem-sub-submenu"> <!--  Universo Inclusivo  -->
+                            <a href="#">Universo Inclusivo <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../Universo_Inclusivo/Mundo_das_Cores.html">Mundo das Cores</a></li>
+                                <li><a href="../Universo_Inclusivo/Extra_Amor.html">Extra Amor</a></li>
+                                <li><a href="../Universo_Inclusivo/Super_Sentidos.html">Super Sentidos</a></li>
+                                <li><a href="../Universo_Inclusivo/Girassóis_Invisíveis.html">Girassóis Invisíveis</a></li>
+                                <li><a href="../Universo_Inclusivo/Sem_Barreiras.html">Sem Barreiras</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Dias Especiais  -->
+                            <a href="#">Dias Especiais <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="../Dias_Especiais/Dia_da_Mae.html">Dia da Mãe</a></li>
+                                <li><a href="../Dias_Especiais/Pascoa.html">Pascoa</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Ocasiões Especiais  -->
+                            <a href="#">Ocasiões Especiais <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Aniversários</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Estações do Ano  -->
+                            <a href="#">Estações do Ano <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Inverno</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Profissões  -->
+                            <a href="#">Profissões <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Advogado</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Signos do Zodíaco  -->
+                            <a href="#">Signos do Zodíaco <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Aquário</a></li>
+                            </ul>
+                        </li>
+                        <li class="tem-sub-submenu"> <!--  Signos Chineses  -->
+                            <a href="#">Signos Chineses <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Boi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Oportunidades</a></li>
+            </ul>
+        </div>  
+
+        <div class="menu-col-central">
+            <ul class="menu-lista">
+                <li><a href="../../index.html" class="ativo" >Personalizados</a></li>
+                <li><a href="../../principal/galeria.html">Galeria</a></li>
+                <li><a href="../../principal/mercadinho.html" >Mercadinho</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-col-direita">
+            <ul class="menu-lista">
+                <li><a href="../../principal/sobre.html">Sobre</a></li>
+                <li><a href="../../principal/contacto.html">Contactos</a></li>
+                <li><a href="#">Testemunhos</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!--  Banner  -->
+    <section class="banner-categoria" style="background-image: url('../Dias_Especiais/Dia_da_Mae/Banner.webp');">
+        <div class="interface">
+            <div class="banner-texto">
+                <h1>Dia da Mãe </h1>
+                    <p>Porque o amor se vê nos pequenos detalhes.</p>
+                    <p>Surpreenda a mulher da sua vida com um presente personalizado que conta o que as palavras não dizem.</p>
+                    <p>Neste Dia da Mãe, ofereça sentimentos.</p>
+            </div>
+        </div>
+    </section>
+    <!--  Barra de Caminho  -->
+    <div class="barra-caminho">
+        <div class="interface">
+            <ul>
+                <li><a href="../../index.html">Personalizados</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="#">Temas</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="#">Dias Especiais</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="../../Temas/Dias_Especiais/dia_da_mae.html">Dia da Mãe</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="../../Temas/Dias_Especiais/dia_da_mae.html"><strong>Temas Canecas</strong></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--  Exemplos de Personalização  -->
+    <section class="exemplos-personalizacao">
+    <div class="interface">
+        <h2 class="titulo-galeria"> Canecas - Dia da Mãe </h2>
+        <div class="grelha-exemplos">
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M01.webp" alt="Exemplo Caneca 1">
+                </div>
+                <h3>M01</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M02.webp" alt="Exemplo Caneca 2">
+                </div>
+                <h3>M02</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M03.webp" alt="Exemplo Caneca 3">
+                </div>
+                <h3>M03</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M04.webp" alt="Exemplo Caneca 4">
+                </div>
+                <h3>M04</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M05.webp" alt="Exemplo Caneca 5">
+                </div>
+                <h3>M05</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M06.webp" alt="Exemplo Caneca 6">
+                </div>
+                <h3>M06</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M07.webp" alt="Exemplo Caneca 7">
+                </div>
+                <h3>M07</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M08.webp" alt="Exemplo Caneca 8">
+                </div>
+                <h3>M08</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M09.webp" alt="Exemplo Caneca 9">
+                </div>
+                <h3>M09</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M10.webp" alt="Exemplo Caneca 10">
+                </div>
+                <h3>M10</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M06.webp" alt="Exemplo Caneca 11">
+                </div>
+                <h3>M11</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M12.webp" alt="Exemplo Caneca 12">
+                </div>
+                <h3>M12</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M13.webp" alt="Exemplo Caneca 13">
+                </div>
+                <h3>M13</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M14.webp" alt="Exemplo Caneca 14">
+                </div>
+                <h3>M14</h3>
+            </div>
+            <div class="exemplo-card">
+                <div class="exemplo-thumb">
+                    <img src="../Dias_Especiais/Dia_da_Mae/Caneca M15.webp" alt="Exemplo Caneca 15">
+                </div>
+                <h3>M15</h3>
+            </div>
+        </div>
+    </section>
+    <!--  Modal Detalhe Carrinho  -->    
+    <div id="modal-item-carrinho" class="modal" style="display:none;">
+        <div class="modal-content" style="max-width: 500px;">
+            <span class="fechar-modal" onclick="fecharModalItem()">&times;</span>
+            <h2 id="det-nome" style="color: #D87093; margin-bottom: 15px;"></h2>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+                <img id="det-img" src="" style="width: 150px; border-radius: 10px; border: 1px solid #eee;">
+                <div style="flex: 1;">
+                    <p><strong>Preço:</strong> <span id="det-preco"></span>€</p>
+                    <hr style="margin: 10px 0; opacity: 0.2;">
+                    <p><strong>Personalização:</strong></p>
+                    <div id="det-personalizacao" style="background: #f9f9f9; padding: 10px; border-radius: 5px; margin-top: 5px; font-size: 0.9em;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Popup Carrinho  -->
+    <div id="side-cart" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>O Teu Pedido</h3>
+            <span class="close-cart" onclick="fecharTudo()">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-body">
+            </div>
+        <div class="cart-footer">
+            <div class="total-area">Total: <span id="cart-total">0.00€</span></div>
+                <button class="btn-finalizar" onclick="abrirModalCheckout()">
+                    Finalizar Compra
+                </button>
+            </div>
+    </div>
+    <div class="overlay-menu" id="overlay-menu" onclick="fecharTudo()">
+    </div>
+    <!--  Popup Finalizar Compra  -->
+    <div id="modal-checkout" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharTudo()">&times;</span>
+            <h2>Finalizar Pedido</h2>
+            <p style="margin-bottom: 30px; color: #666; font-size: 0.95rem;">
+                Preenche os teus dados para processarmos a encomenda.
+            </p>
+            <form id="form-checkout" onsubmit="enviarPedido(event)">
+                <div class="grupo-input">
+                    <input type="text" id="nome-check" placeholder=" " required>
+                    <label>Nome Completo</label>
+                </div>
+                <div class="grupo-input">
+                    <input type="email" id="email-check" placeholder=" " required>
+                    <label>Email</label>
+                </div>
+                <div class="grupo-input">
+                    <div class="grupo-input">
+                        <input type="tel" id="tel-check" placeholder=" ">
+                        <label>Telemóvel (Opcional)</label>
+                        <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">
+                            * Nota: Caso não forneça o telemóvel, só poderemos entrar em contacto apartir do email fornecido.
+                        </p>
+                    </div>
+                </div>
+                <input type="hidden" id="detalhes-pedido-final" name="message">
+                <p style="margin: 15px 0; font-size: 0.9rem; color: #555;">Total a Pagar: <strong id="total-modal">0.00€</strong></p>
+
+                <button type="submit" class="btn-finalizar">Enviar Pedido</button>  
+            </form>
+        </div>
+    </div>
+    <!--  Rodapé  -->
+    <footer class="rodape-principal">
+    <div class="interface">
+        <div class="footer-conteudo">
+            <p>&copy; 2026 Cantinho das La - Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos e Condições</a>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+<!-- *************** Scripts *************** -->
+<script>
+
+/* 1. VARIÁVEIS GLOBAIS (O topo de tudo) */
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+let produtoSendoConfigurado = {};
+let tempProduto = { nome: "", preco: "" };
+
+ /* 2. FUNÇÕES DE ACÇÃO (Configurador, Checkout, Envio) */
+
+// Controlos de Interface
+function abrirCarrinho() {
+        document.getElementById('side-cart').classList.add('active');
+        document.getElementById('overlay-menu').classList.add('abrir-menu');
+        renderizarCarrinho();
+    }
+
+function fecharTudo() {
+        document.getElementById('side-cart').classList.remove('active');
+        document.getElementById('overlay-menu').classList.remove('abrir-menu');
+        document.getElementById('modal-checkout').style.display = 'none';
+    }
+
+// Adicionar ao Carrinho
+function adicionarAoCarrinho(nome, preco, imagem, inputId) {
+    // 1. Capturar o input de quantidade
+    const qtdInput = document.getElementById(inputId);
+    
+    // 2. Converter para número (garantir que é pelo menos 1)
+    const quantidadeAdicional = parseInt(qtdInput.value) || 1;
+
+    // 3. Verificar se o produto já existe no carrinho
+    const index = carrinho.findIndex(item => item.nome === nome);
+
+    if (index !== -1) {
+        // SE JÁ EXISTE: Soma a nova quantidade à que já lá estava
+        carrinho[index].quantidade += quantidadeAdicional;
+    } else {
+        // SE É NOVO: Adiciona com a quantidade selecionada
+        carrinho.push({ 
+            nome: nome, 
+            preco: preco, 
+            imagem: imagem, 
+            quantidade: quantidadeAdicional 
+        });
+    }
+
+    // 4. Salvar e Atualizar
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    atualizarContador();
+    abrirCarrinho();
+    
+    // 5. Resetar o input do card para 1
+    qtdInput.value = 1;
+}
+
+// Desenhar Itens no Carrinho
+function renderizarCarrinho() {
+    // IDs corrigidos para coincidir com o teu HTML
+    const listaCarrinho = document.getElementById('cart-items'); 
+    const totalCarrinho = document.getElementById('cart-total');
+    
+    if (!listaCarrinho) return; 
+
+    listaCarrinho.innerHTML = '';
+    let total = 0;
+
+    if (carrinho.length === 0) {
+        listaCarrinho.innerHTML = '<p style="text-align:center; padding: 20px;">O seu carrinho está vazio.</p>';
+        totalCarrinho.innerText = '0.00€';
+        return;
+    }
+
+    carrinho.forEach((item, index) => {
+        total += item.preco * (item.quantidade || 1);
+
+        const divItem = document.createElement('div');
+        divItem.className = 'item-carrinho';
+        
+        divItem.innerHTML = `
+            <img src="${item.imagem}" alt="${item.nome}" 
+                 onclick="verDetalhesNoCarrinho(${index})" 
+                 style="cursor: pointer; width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+            
+            <div class="item-info" style="flex: 1; margin-left: 10px;">
+                <h4 onclick="verDetalhesNoCarrinho(${index})" 
+                    style="cursor: pointer; color: #D87093; margin: 0; font-size: 0.9em;">
+                    ${item.nome}
+                </h4>
+                <p style="margin: 5px 0; font-size: 0.85em;">
+                    ${item.preco.toFixed(2)}€ x ${item.quantidade || 1}
+                </p>
+            </div>
+
+            <button onclick="removerItem(${index})" 
+                    style="background: none; border: none; color: #ff4d4d; cursor: pointer;">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        `;
+        
+        listaCarrinho.appendChild(divItem);
+    });
+
+    totalCarrinho.innerText = total.toFixed(2) + "€";
+}
+
+function removerItem(index) {
+        carrinho.splice(index, 1);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        renderizarCarrinho();
+        atualizarContador();
+}
+
+function atualizarContador() {
+        const total = carrinho.reduce((sum, item) => sum + item.quantidade, 0);
+        document.getElementById('cart-count').innerText = total;
+    }
+
+function abrirModalCheckout() {
+        if(carrinho.length === 0) return alert("Carrinho vazio!");
+        fecharTudo();
+        document.getElementById('modal-checkout').style.display = 'block';
+        const total = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0);
+        document.getElementById('total-modal').innerText = total.toFixed(2) + "€";
+    }
+
+function enviarPedido(event) {
+    event.preventDefault(); // Impede a página de recarregar
+
+    const btn = event.target.querySelector('button');
+    btn.innerText = "A enviar...";
+    btn.disabled = true;
+
+    // 1. Prepara o resumo dos produtos para a variável {{message}} do EmailJS
+    const resumoFinal = gerarResumoPedido(); 
+
+    // 2. Parâmetros para o EmailJS
+    const templateParams = {
+        from_name: document.getElementById('nome-check').value,
+        user_email: document.getElementById('email-check').value,
+        user_phone: document.getElementById('tel-check').value || "Não fornecido",
+        message: resumoFinal // Aqui vai a lista de artigos + personalizações
+    };
+
+    // 3. Envio Real (Verifica se o teu Service e Template ID estão corretos)
+    emailjs.send("service_yxgdwtw", "template_rw07z9y", templateParams)
+        .then(function() {
+            alert('Encomenda enviada com sucesso! Entraremos em contacto.');
+            carrinho = []; // Limpa o carrinho
+            renderizarCarrinho();
+            document.querySelector('#modal-checkout form').reset();
+            fecharTudo();
+        }, function(error) {
+            alert('Erro ao enviar: ' + JSON.stringify(error));
+        })
+        .finally(() => {
+            btn.innerText = "Enviar Pedido";
+            btn.disabled = false;
+        });
+}
+
+// Função para abrir o modal e preencher os dados
+function abrirDetalhes(imagem, titulo, descricao, preco) {
+    // 1. Substituir os elementos no modal com as informações recebidas
+    document.getElementById('detalhe-img').src = imagem;
+    document.getElementById('detalhe-titulo').innerText = titulo;
+    document.getElementById('detalhe-descricao').innerText = descricao;
+    document.getElementById('detalhe-preco').innerText = parseFloat(preco).toFixed(2) + '€';
+
+    // 3. Mostrar o modal
+    document.getElementById('modal-detalhes').style.display = 'flex'; // ou 'block' dependendo do teu CSS
+}
+
+// Função para fechar o modal de detalhes
+function fecharDetalhes() {
+    document.getElementById('modal-detalhes').style.display = 'none';
+}
+
+
+function mostrarNomeArquivo() {
+    const input = document.getElementById('foto-cliente');
+    const status = document.getElementById('status-arquivo');
+    status.innerText = input.files[0] ? "📷 Foto: " + input.files[0].name : "";
+}
+
+
+
+// 1. Quando clica no botão "Adicionar" do card
+function abrirConfigurador(nome, preco, imagem) {
+    tempProduto.nome = nome;
+    tempProduto.preco = preco;
+    tempProduto.imagem = imagem;
+
+    // Limpa campos anteriores
+    document.getElementById('titulo-pers').value = '';
+    document.getElementById('corpo-pers').value = '';
+    document.getElementById('ref-galeria').value = '';
+    document.getElementById('foto-cliente').value = '';
+    document.getElementById('status-arquivo').innerText = '';
+
+    document.getElementById('nome-prod-config').innerText = nome;
+    document.getElementById('modal-configurador').style.display = 'flex';
+}
+
+// 2. Quando clica em "Confirmar e Adicionar" no modal
+function confirmarConfiguracao() {
+    const t = document.getElementById('titulo-pers').value;
+    const c = document.getElementById('corpo-pers').value;
+    const r = document.getElementById('ref-galeria').value;
+    const f = document.getElementById('foto-cliente').files[0];
+
+    if (!t && !r && !f) {
+        alert("Por favor, preencha o texto, a referência ou anexe uma foto.");
+        return;
+    }
+
+    // Criamos um objeto organizado
+    const novoItem = {
+        nome: tempProduto.nome,
+        preco: parseFloat(tempProduto.preco),
+        imagem: tempProduto.imagem,
+        quantidade: 1, // <--- Adiciona esta linha
+        detalhes: {
+            titulo: t || null,
+            corpo: c || null,
+            referencia: r || null,
+            foto: f ? f.name : null
+        }
+    };
+
+    carrinho.push(novoItem);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    
+    atualizarContador();
+    fecharConfigurador();
+    abrirCarrinho(); // Mostra logo o carrinho
+}
+
+function fecharConfigurador() {
+    document.getElementById('modal-configurador').style.display = 'none';
+}
+
+// Função para garantir escolha única: limpa os outros campos ao escrever num
+function validarEscolhaUnica(campoActivo) {
+    const titulo = document.getElementById('titulo-pers');
+    const corpo = document.getElementById('corpo-pers');
+    const ref = document.getElementById('ref-galeria');
+    const foto = document.getElementById('foto-cliente');
+    const statusFoto = document.getElementById('status-arquivo');
+
+    if (campoActivo === 'texto') {
+        ref.value = '';
+        foto.value = '';
+        statusFoto.innerText = '';
+    } else if (campoActivo === 'ref') {
+        titulo.value = '';
+        corpo.value = '';
+        foto.value = '';
+        statusFoto.innerText = '';
+    } else if (campoActivo === 'foto') {
+        titulo.value = '';
+        corpo.value = '';
+        ref.value = '';
+    }
+}
+
+function abrirCheckout(nome, preco) {
+    document.getElementById('nome-prod-check').value = nome;
+    document.getElementById('preco-check').value = preco;
+    document.getElementById('modal-checkout').style.display = 'flex';
+}
+
+function fecharConfigurador() {
+    document.getElementById('modal-configurador').style.display = 'none';
+}
+
+/* 3. EVENTOS DE JANELA (Window Events - Todos juntos no fim) */
+
+// Fechar o modal ao clicar fora da caixa branca (no fundo escuro)
+window.addEventListener('click', function(event) {
+    const modalDetalhes = document.getElementById('modal-detalhes');
+    const modalCheckout = document.getElementById('modal-checkout');
+
+    // Verifica se o clique foi no fundo do modal de Detalhes
+    if (event.target === modalDetalhes) {
+        fecharDetalhes();
+    }
+
+    // Já agora, aplicamos a mesma lógica para o modal de Checkout!
+    if (event.target === modalCheckout) {
+        fecharTudo(); // Ou a função que usas para fechar o checkout
+    }
+});
+
+function verDetalhesNoCarrinho(index) {
+    const item = carrinho[index];
+    
+    document.getElementById('det-nome').innerText = item.nome;
+    document.getElementById('det-img').src = item.imagem;
+    document.getElementById('det-preco').innerText = item.preco.toFixed(2);
+    
+    const divPers = document.getElementById('det-personalizacao');
+    divPers.innerHTML = ""; // Limpa anterior
+
+    if (item.detalhes.titulo) divPers.innerHTML += `<p><strong>Título:</strong> ${item.detalhes.titulo}</p>`;
+    if (item.detalhes.corpo) divPers.innerHTML += `<p><strong>Corpo:</strong> ${item.detalhes.corpo}</p>`;
+    if (item.detalhes.referencia) divPers.innerHTML += `<p><strong>Ref. Galeria:</strong> ${item.detalhes.referencia}</p>`;
+    if (item.detalhes.foto) divPers.innerHTML += `<p><i class="fa-solid fa-image"></i> Foto: ${item.detalhes.foto}</p>`;
+    
+    if (divPers.innerHTML === "") divPers.innerHTML = "Sem personalização.";
+
+    document.getElementById('modal-item-carrinho').style.display = 'flex';
+}
+
+function fecharModalItem() {
+    document.getElementById('modal-item-carrinho').style.display = 'none';
+}
+function gerarResumoPedido() {
+    let resumo = "--- DETALHES DA ENCOMENDA ---\n\n";
+    
+    carrinho.forEach((item, index) => {
+        resumo += `ITEM ${index + 1}: ${item.nome}\n`;
+        resumo += `Preço: ${item.preco.toFixed(2)}€\n`;
+        
+        const p = item.detalhes;
+        if (p.titulo || p.corpo || p.referencia || p.foto) {
+            resumo += `Personalização:\n`;
+            if (p.titulo) resumo += `   - Título: ${p.titulo}\n`;
+            if (p.corpo)  resumo += `   - Mensagem: ${p.corpo}\n`;
+            if (p.referencia) resumo += `   - Ref. Galeria: ${p.referencia}\n`;
+            if (p.foto)   resumo += `   - Ficheiro: ${p.foto}\n`;
+        }
+        resumo += `\n`;
+    });
+
+    const total = carrinho.reduce((sum, i) => sum + i.preco, 0);
+    resumo += `TOTAL A PAGAR: ${total.toFixed(2)}€`;
+    
+    return resumo;
+}
+
+window.onload = atualizarContador;
+    
+</script>
+</body>
+</html>
